@@ -1,32 +1,528 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-    <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/highlight/github.min.css">
 
-    <title>JS Tasks</title>
+  <title>JS Tasks</title>
 </head>
+
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h1>JS Tasks</h1>
-                <p>Здесь содержатся задания по JavaScript</p>
-            </div>
-        </div>
+  <header class="navbar navbar-expand-sm navbar-light bg-light " id="siteHeader">
+    <div class="container container-fluid">
+      <a class="navbar-brand" href="#">
+        <span class="bg-primary text-light rounded px-1">JS</span>
+        Tasks
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <div class="row">
-            <div class="col-md-2">
-                Column 1
-            </div>
-            <div class="col-md-10">
-                Column 2
-            </div>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
+        <span class="navbar-text user-select-none">Решение задач по JavaScript от Максима Пескова</span>
+
+        <div class="navbar-nav">
+          <a href="#" class="nav-link">
+            Source
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github"
+              viewBox="0 0 16 16">
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+            </svg>
+          </a>
         </div>
+      </div>
+
     </div>
+  </header>
 
-    <script src="js/bootstrap.bundle.js"></script>
+  <div class="container mt-3">
+    <div class="row">
+      <aside class="col-md-3 col-xl-2">
+        <div class="sticky-top pt-3 mb-4">
+          <nav class="list-group list-group-flush" id="list-tab" role="tablist">
+            <a class="list-group-item list-group-item-action active d-flex justify-content-between align-items-center"
+              id="list-begin-list" data-bs-toggle="list" role="tab" href="#list-begin" aria-controls="list-begin">
+              Begin <span class="badge bg-primary rounded-pill">10</span>
+            </a>
+            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center disabled"
+              id="list-integer-list" data-bs-toggle="list" role="tab" href="#list-integer" aria-controls="list-integer">
+              Integer <span class="badge rounded-pill text-secondary">0</span>
+            </a>
+            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center disabled"
+              id="list-boolean-list" data-bs-toggle="list" role="tab" href="#list-boolean" aria-controls="list-boolean">
+              Boolean <span class="badge rounded-pill text-secondary">0</span>
+            </a>
+            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center disabled"
+              id="list-if-list" data-bs-toggle="list" role="tab" href="#list-if" aria-controls="list-if">
+              If <span class="badge rounded-pill text-secondary">0</span>
+            </a>
+          </nav>
+          <!-- <p class="p-3 text-muted ">В процессе заполнения..</p> -->
+        </div>
+      </aside>
+      <main class="col">
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="list-begin" role="tabpanel" aria-labelledby="list-begin-list">
+            <div class="row mb-5">
+              <div class="d-none d-sm-block col-sm-3 text-muted order-first order-sm-last">
+                <div class="sticky-top">
+                  <span class="d-block px-3 py-2 mb-2 border-bottom">Навигация</span>
+                  <nav class="nav nav-pills flex-sm-column" id="page-nav">
+                    <a href="#begin1" class="nav-link">Begin 1</a>
+                    <a href="#begin2" class="nav-link">Begin 2</a>
+                    <a href="#begin3" class="nav-link">Begin 3</a>
+                    <a href="#begin4" class="nav-link">Begin 4</a>
+                    <a href="#begin5" class="nav-link">Begin 5</a>
+                    <a href="#begin6" class="nav-link">Begin 6</a>
+                    <a href="#begin7" class="nav-link">Begin 7</a>
+                    <a href="#begin8" class="nav-link">Begin 8</a>
+                    <a href="#begin9" class="nav-link">Begin 9</a>
+                    <a href="#begin10" class="nav-link">Begin 10</a>
+                  </nav>
+                  <div class="d-none d-sm-block">
+                    <a href="#" class="d-block px-3 py-2 pb-0 mt-3 link-secondary border-top">
+                      Наверх
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrow-up" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col pt-3 d-grid gap-5">
+                <div>
+                  <img src="img/head_image_begin.jpg" alt="head_image_begin" class="img-fluid">
+                  <p class="lead mt-3">Ввод и вывод данных, оператор присваивания.</p>
+                  <p class="lead">Все входные и выходные данные в заданиях этой группы являются вещественными числами.
+                  </p>
+                  <div class="d-sm-none">
+                    <span class="d-block px-3 py-2 mb-2 border-bottom">Навигация</span>
+                    <nav class="nav nav-pills justify-content-between" id="page-nav">
+                      <a href="#begin1" class="nav-link">Begin 1</a>
+                      <a href="#begin2" class="nav-link">Begin 2</a>
+                      <a href="#begin3" class="nav-link">Begin 3</a>
+                      <a href="#begin4" class="nav-link">Begin 4</a>
+                      <a href="#begin5" class="nav-link">Begin 5</a>
+                      <a href="#begin6" class="nav-link">Begin 6</a>
+                      <a href="#begin7" class="nav-link">Begin 7</a>
+                      <a href="#begin8" class="nav-link">Begin 8</a>
+                      <a href="#begin9" class="nav-link">Begin 9</a>
+                      <a href="#begin10" class="nav-link">Begin 10</a>
+                    </nav>
+                  </div>
+                </div>
+                <div id="begin1">
+                  <h4>Begin 1</h4>
+                  <p>Дана сторона квадрата <span class="formula">a</span>.
+                    Найти его периметр <span class="formula">P = 4⋅ a</span>.
+                  </p>
+
+                  <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                      <span class="card-text">Код решения</span>
+                      <button id="btn_snippet_begin1" class="btn btn-outline-primary btn-sm">Запустить</button>
+                    </div>
+                    <div class="card-body p-0 user-select-none" >
+                      <ol class="text-muted mx-2 my-3 lh-sm font-monospace">
+                        <li><code class="language-javascript">let a = Number(prompt("Введите сторону квадрата"));</code></li>
+                        <li><code class="language-javascript">let P = 4 * a;</code></li>
+                        <li><code class="language-javascript">alert("Периметр квадрата: " + P);</code></li>
+                      </ol>
+                    </div>
+                    <script text="javascript">
+                      function snippet_begin1() {
+                        let a = Number(prompt("Введите сторону квадрата"));
+                        let P = 4 * a;
+                        alert("Периметр квадрата: " + P);
+                      }
+
+                      let btn_snippet_begin1 = document.getElementById("btn_snippet_begin1");
+                      btn_snippet_begin1.addEventListener('click', () => snippet_begin1());
+                    </script>
+                  </div>
+                </div>
+                <div id="begin2">
+                  <h4>Begin 2</h4>
+                  <p>Дана сторона квадрата <span class="formula">a</span>.
+                    Найти его площадь <span class="formula">S = a<sup>2</sup></span>.
+                  </p>
+
+                  <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                      <span class="card-text">Код решения</span>
+                      <button id="btn_snippet_begin2" class="btn btn-outline-primary btn-sm">Запустить</button>
+                    </div>
+                    <div class="card-body p-0 user-select-none">
+                      <ol class="text-muted mx-2 my-3 lh-sm font-monospace">
+                        <li><code class="language-javascript">let a = Number(prompt("Введите сторону квадрата"));</code></li>
+                        <li><code class="language-javascript">let S = a * a;</code></li>
+                        <li><code class="language-javascript">alert("Площадь квадрата: " + S);</code></li>
+                      </ol>
+                    </div>
+                    <script text="javascript">
+                      function snippet_begin2() {
+                        let a = Number(prompt("Введите сторону квадрата"));
+                        let S = a * a;
+                        alert("Площадь квадрата: " + S);
+                      }
+
+                      let btn_snippet_begin2 = document.getElementById("btn_snippet_begin2");
+                      btn_snippet_begin2.addEventListener('click', () => snippet_begin2());
+                    </script>
+                  </div>
+                </div>
+                <div id="begin3">
+                  <h4 class="d-flex align-items-center">Begin 3 <small class="btn btn-outline-dark btn-sm disabled py-0 ms-3 ">Сложный</small></h4>
+                  <p>Даны стороны прямоугольника <span class="formula">a</span> и
+                    <span class="formula">b</span>.
+                    Найти его площадь <span class="formula">S = a⋅ b </span>
+                    и периметр <span class="formula">P = 2⋅ (a + b)</span>.
+                  </p>
+
+                  <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                      <span class="card-text">Код решения</span>
+                      <button id="btn_snippet_begin3" class="btn btn-outline-primary btn-sm">Запустить</button>
+                    </div>
+                    <div class="card-body p-0 user-select-none">
+                      <ol class="text-muted mx-2 my-3 lh-sm font-monospace ">
+                        <li><code class="language-javascript">let a = Number(prompt("Введите сторону 'a' прямоугольника"));</code></li>
+                        <li><code class="language-javascript">let b = Number(prompt("Введите сторону 'b' прямоугольника"));</code></li>
+                        <li><code class="language-javascript">let S = a * b;</code></li>
+                        <li><code class="language-javascript">let P = 2 * (a + b);</code></li>
+                        <li><code class="language-javascript">alert("Площадь прямоугольника: " + S + "\n" + "Периметр прямоугольника: " + P);</code></li>
+                      </ol>
+                    </div>
+                    <script text="javascript">
+                      function snippet_begin3() {
+                        let a = Number(prompt("Введите сторону 'a' прямоугольника"));
+                        let b = Number(prompt("Введите сторону 'b' прямоугольника"));
+                        let S = a * b;
+                        let P = 2 * (a + b);
+                        alert("Площадь прямоугольника: " + S + "\n" +
+                          "Периметр прямоугольника: " + P);
+                      }
+
+                      let btn_snippet_begin3 = document.getElementById("btn_snippet_begin3");
+                      btn_snippet_begin3.addEventListener('click', () => snippet_begin3());
+                    </script>
+                  </div>
+                </div>
+                <div id="begin4">
+                  <h4>Begin 4</h4>
+                  <p>Дан диаметр окружности <span class="formula">d</span>.
+                    Найти её длину <span class="formula">L = π⋅ d</span>.
+                    В качестве значения <span class="formula">π</span>
+                    использовать <span class="formula">3.14</span>.
+                  </p>
+
+                  <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                      <span class="card-text">Код решения</span>
+                      <button id="btn_snippet_begin4" class="btn btn-outline-primary btn-sm">Запустить</button>
+                    </div>
+                    <div class="card-body p-0 user-select-none">
+                      <ol class="text-muted mx-2 my-3 lh-sm font-monospace">
+                        <li><code class="language-javascript">let d = Number(prompt("Введите диаметр окружности"));</code></li>
+                        <li><code class="language-javascript">let L = 3.14 * d;</code></li>
+                        <li><code class="language-javascript">alert("Длина окружности: " + L);</code></li>
+                      </ol>
+                    </div>
+                    <script text="javascript">
+                      function snippet_begin4() {
+                        let d = Number(prompt("Введите диаметр окружности"));
+                        let L = 3.14 * d;
+                        alert("Длина окружности: " + L);
+                      }
+
+                      let btn_snippet_begin4 = document.getElementById("btn_snippet_begin4");
+                      btn_snippet_begin4.addEventListener('click', () => snippet_begin4());
+                    </script>
+                  </div>
+                </div>
+                <div id="begin5">
+                  <h4>Begin 5</h4>
+                  <p>Дана длина ребра куба <span class="formula">a</span>.
+                    Найти объём куба <span class="formula">V = a<sup>3</sup></span>
+                    и площадь его поверхности <span class="formula">S = 6⋅ a<sup>2</sup></span>.
+                  </p>
+
+                  <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                      <span class="card-text">Код решения</span>
+                      <button id="btn_snippet_begin5" class="btn btn-outline-primary btn-sm">Запустить</button>
+                    </div>
+                    <div class="card-body p-0 user-select-none">
+                      <ol class="text-muted mx-2 my-3 lh-sm font-monospace">
+                        <li><code class="language-javascript">let a = Number(prompt("Введите длину ребра куба"));</code></li>
+                        <li><code class="language-javascript">let V = Math.pow(a, 3);</code></li>
+                        <li><code class="language-javascript">let S = 6 * Math.pow(a, 2);</code></li>
+                        <li><code class="language-javascript">alert("Объём куба: " + V + "\n" + "Площадь поверхности куба: " + S);</code></li>
+                      </ol>
+                    </div>
+                    <script text="javascript">
+                      function snippet_begin5() {
+                        let a = Number(prompt("Введите длину ребра куба"));
+                        let V = Math.pow(a, 3);
+                        let S = 6 * Math.pow(a, 2);
+                        alert("Объём куба: " + V + "\n" +
+                          "Площадь поверхности куба: " + S);
+                      }
+
+                      let btn_snippet_begin5 = document.getElementById("btn_snippet_begin5");
+                      btn_snippet_begin5.addEventListener('click', () => snippet_begin5());
+                    </script>
+                  </div>
+                </div>
+                <div id="begin6">
+                  <h4>Begin 6</h4>
+                  <p>Даны длины рёбер <span class="formula">a</span>,
+                    <span class="formula">b</span>, <span class="formula">c</span>
+                    прямоугольного параллелепипеда. Найти его объём <span class="formula">V = a⋅ b⋅ c</span>
+                    и площадь поверхности <span class="formula">S = 2⋅ (a⋅ b + b⋅ c + a⋅ c)</span>.
+                  </p>
+
+                  <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                      <span class="card-text">Код решения</span>
+                      <button id="btn_snippet_begin6" class="btn btn-outline-primary btn-sm">Запустить</button>
+                    </div>
+                    <div class="card-body p-0 user-select-none">
+                      <ol class="text-muted mx-2 my-3 lh-sm font-monospace">
+                        <li><code class="language-javascript">let a = Number(prompt("Введите длину ребра 'a' параллелепипеда"));</code></li>
+                        <li><code class="language-javascript">let b = Number(prompt("Введите длину ребра 'b' параллелепипеда"));</code></li>
+                        <li><code class="language-javascript">let c = Number(prompt("Введите длину ребра 'c' параллелепипеда"));</code></li>
+                        <li><code class="language-javascript">let V = a * b * c;</code></li>
+                        <li><code class="language-javascript">let S = 2 * (a * b + b * c + a * c);</code></li>
+                        <li><code class="language-javascript">alert("Объём параллелепипеда: " + V + "\n" + "Площадь поверхности параллелепипеда: " + S);</code></li>
+                      </ol>
+                    </div>
+                    <script text="javascript">
+                      function snippet_begin6() {
+                        let a = Number(prompt("Введите длину ребра 'a' параллелепипеда"));
+                        let b = Number(prompt("Введите длину ребра 'b' параллелепипеда"));
+                        let c = Number(prompt("Введите длину ребра 'c' параллелепипеда"));
+                        let V = a * b * c;
+                        let S = 2 * (a * b + b * c + a * c);
+                        alert("Объём параллелепипеда: " + V + "\n" +
+                          "Площадь поверхности параллелепипеда: " + S);
+                      }
+
+                      let btn_snippet_begin6 = document.getElementById("btn_snippet_begin6");
+                      btn_snippet_begin6.addEventListener('click', () => snippet_begin6());
+                    </script>
+                  </div>
+                </div>
+                <div id="begin7">
+                  <h4 class="d-flex align-items-center">Begin 7 <small
+                      class="btn btn-outline-dark btn-sm disabled py-0 ms-3 ">Сложный</small></h4>
+                  <p>Найти длину окружности <span class="formula">L</span> и площадь круга <span class="formula">S</span>
+                    заданного радиуса <span class="formula">R</span>: <span class="formula">L = 2⋅ π⋅ R</span>,
+                    <span class="formula">S = π⋅ R<sup>2</sup></span>.
+                  </p>
+
+                  <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                      <span class="card-text">Код решения</span>
+                      <button id="btn_snippet_begin7" class="btn btn-outline-primary btn-sm">Запустить</button>
+                    </div>
+                    <div class="card-body p-0 user-select-none">
+                      <ol class="text-muted mx-2 my-3 lh-sm font-monospace">
+                        <li><code class="language-javascript">let R = Number(prompt("Введите радиус круга"));</code></li>
+                        <li><code class="language-javascript">let L = 2 * 3.14 * R;</code></li>
+                        <li><code class="language-javascript">let S = 3.14 * Math.pow(R, 2);</code></li>
+                        <li><code class="language-javascript">alert("Длина окружности: " + L + "\n" + "Площадь круга: " + S);</code></li>
+                      </ol>
+                    </div>
+                    <script text="javascript">
+                      function snippet_begin7() {
+                        let R = Number(prompt("Введите радиус круга"));
+                        let L = 2 * 3.14 * R;
+                        let S = 3.14 * Math.pow(R, 2);
+                        alert("Длина окружности: " + L + "\n" +
+                          "Площадь круга: " + S);
+                      }
+
+                      let btn_snippet_begin7 = document.getElementById("btn_snippet_begin7");
+                      btn_snippet_begin7.addEventListener('click', () => snippet_begin7());
+                    </script>
+                  </div>
+                </div>
+                <div id="begin8">
+                  <h4>Begin 8</h4>
+                  <p>Даны два числа <span class="formula">a</span> и <span class="formula">b</span>.
+                    Найти их <span class="fst-italic">среднее арифметическое</span>:
+                    <span class="formula">(a + b) / 2</span>.
+                  </p>
+
+                  <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                      <span class="card-text">Код решения</span>
+                      <button id="btn_snippet_begin8" class="btn btn-outline-primary btn-sm">Запустить</button>
+                    </div>
+                    <div class="card-body p-0 user-select-none">
+                      <ol class="text-muted mx-2 my-3 lh-sm font-monospace">
+                        <li><code class="language-javascript">let a = Number(prompt("Введите число 'a'"));</code></li>
+                        <li><code class="language-javascript">let b = Number(prompt("Введите число 'b'"));</code></li>
+                        <li><code class="language-javascript">let M = (a + b) / 2;</code></li>
+                        <li><code class="language-javascript">alert("Среднее арифметическое: " + M);</code></li>
+                      </ol>
+                    </div>
+                    <script text="javascript">
+                      function snippet_begin8() {
+                        let a = Number(prompt("Введите число 'a'"));
+                        let b = Number(prompt("Введите число 'b'"));
+                        let M = (a + b) / 2;
+                        alert("Среднее арифметическое: " + M);
+                      }
+
+                      let btn_snippet_begin8 = document.getElementById("btn_snippet_begin8");
+                      btn_snippet_begin8.addEventListener('click', () => snippet_begin8());
+                    </script>
+                  </div>
+                </div>
+                <div id="begin9">
+                  <h4>Begin 9</h4>
+                  <p>Даны два неотрицательных числа <span class="formula">a</span> и <span class="formula">b</span>.
+                    Найти их <span class="fst-italic">среднее геометрическое</span>, то есть квадратный корень
+                    из их произведения: <span class="formula">√(a * b)</span>
+                  </p>
+
+                  <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                      <span class="card-text">Код решения</span>
+                      <button id="btn_snippet_begin9" class="btn btn-outline-primary btn-sm">Запустить</button>
+                    </div>
+                    <div class="card-body p-0 user-select-none">
+                      <ol class="text-muted mx-2 my-3 lh-sm font-monospace">
+                        <li><code class="language-javascript">let a = Number(prompt("Введите неотрицательное число 'a'"));</code></li>
+                        <li><code class="language-javascript">let b = Number(prompt("Введите неотрицательное число 'b'"));</code></li>
+                        <li><code class="language-javascript">let G = Math.sqrt(a * b);</code></li>
+                        <li><code class="language-javascript">alert("Среднее геометрическое: " + G);</code></li>
+                      </ol>
+                    </div>
+                    <script text="javascript">
+                      function snippet_begin9() {
+                        let a = Number(prompt("Введите неотрицательное число 'a'"));
+                        let b = Number(prompt("Введите неотрицательное число 'b'"));
+                        let G = Math.sqrt(a * b);
+                        alert("Среднее геометрическое: " + G);
+                      }
+
+                      let btn_snippet_begin9 = document.getElementById("btn_snippet_begin9");
+                      btn_snippet_begin9.addEventListener('click', () => snippet_begin9());
+                    </script>
+                  </div>
+                </div>
+                <div id="begin10">
+                  <h4>Begin 10</h4>
+                  <p>Даны два ненулевых числа. Найти сумму, разность, произведение
+                    и частное их квадратов.
+                  </p>
+
+                  <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                      <span class="card-text">Код решения</span>
+                      <button id="btn_snippet_begin10" class="btn btn-outline-primary btn-sm">Запустить</button>
+                    </div>
+                    <div class="card-body p-0 user-select-none">
+                      <ol class="text-muted mx-2 my-3 lh-sm font-monospace">
+                        <li><code class="language-javascript">let a = Number(prompt("Введите первое ненулевое число"));</code></li>
+                        <li><code class="language-javascript">let b = Number(prompt("Введите второе ненулевое число"));</code></li>
+                        <li><code class="language-javascript">let Sum = (a * a) + (b * b);</code></li>
+                        <li><code class="language-javascript">let Dif = (a * a) - (b * b);</code></li>
+                        <li><code class="language-javascript">let Prd = (a * a) * (b * b);</code></li>
+                        <li><code class="language-javascript">let Qnt = (a * a) / (b * b);</code></li>
+                        <li><code class="language-javascript">alert("Сумма квадратов: " + Sum + "\n" + "Разность квадратов: " + Dif + "\n" +</code></li>
+                        <li><code class="language-javascript ps-5">"Произведение квадратов: " + Prd + "\n" + "Частное квадратов: " + Qnt);</code></li>
+                      </ol>
+                    </div>
+                    <script text="javascript">
+                      function snippet_begin10() {
+                        let a = Number(prompt("Введите первое ненулевое число"));
+                        let b = Number(prompt("Введите второе ненулевое число"));
+                        let Sum = (a * a) + (b * b);
+                        let Dif = (a * a) - (b * b);
+                        let Prd = (a * a) * (b * b);
+                        let Qnt = (a * a) / (b * b);
+                        alert("Сумма квадратов: " + Sum + "\n" +
+                          "Разность квадратов: " + Dif + "\n" +
+                          "Произведение квадратов: " + Prd + "\n" +
+                          "Частное квадратов: " + Qnt);
+                      }
+
+                      let btn_snippet_begin10 = document.getElementById("btn_snippet_begin10");
+                      btn_snippet_begin10.addEventListener('click', () => snippet_begin10());
+                    </script>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="list-integer" role="tabpanel" aria-labelledby="list-integer-list">
+            Integer
+          </div>
+          <div class="tab-pane fade" id="list-boolean" role="tabpanel" aria-labelledby="list-boolean-list">
+            Boolean
+          </div>
+          <div class="tab-pane fade" id="list-if" role="tabpanel" aria-labelledby="list-if-list">
+            Boolean
+          </div>
+        </div>
+      </main>
+      <div class="d-flex d-sm-none fixed-bottom justify-content-end pb-3">
+        <a href="#" class="btn bg-light border">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+          </svg>
+          Наверх
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-5 border-top">
+      <p class="col-md-4 mb-0 px-1 text-muted">© 2021 Максим Песков</p>
+      <a class="col-md-4 navbar-brand m-0  p-0 px-1 text-dark text-center" href="#">
+        <span class="bg-primary text-light rounded px-1">JS</span>
+        Tasks
+      </a>
+      <a href="#" class="nav-link p-0 col-md-4 px-1 text-end text-dark">
+        Source
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github"
+          viewBox="0 0 16 16">
+          <path
+            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+        </svg>
+      </a>
+    </footer>
+  </div>
+
+  <script src="js/bootstrap.bundle.js"></script>
+  <script src="js/highlight.js"></script>
+  <script src="js/javascript.min.js"></script>
+  <script>
+    hljs.highlightAll();
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('code.language-javascript').forEach((el) => {
+        hljs.highlightElement(el);
+      });
+    });
+  </script>
 </body>
+
 </html>
