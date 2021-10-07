@@ -68,7 +68,7 @@
           <!-- <p class="p-3 text-muted ">В процессе заполнения..</p> -->
         </div>
       </aside>
-      <main class="col">
+      <main class="col-md-9 col-xl-10">
         <div class="tab-content" id="nav-tabContent">
           <div class="tab-pane fade show active" id="list-begin" role="tabpanel" aria-labelledby="list-begin-list">
             <div class="row mb-5">
@@ -99,8 +99,8 @@
                   </div>
                 </div>
               </div>
-              <div class="col pt-3 d-grid gap-5">
-                <div>
+              <div class="col-sm-9 pt-3">
+                <div class="mb-5">
                   <img src="img/head_image_begin.jpg" alt="head_image_begin" class="img-fluid">
                   <p class="lead mt-3">Ввод и вывод данных, оператор присваивания.</p>
                   <p class="lead">Все входные и выходные данные в заданиях этой группы являются вещественными числами.
@@ -121,7 +121,7 @@
                     </nav>
                   </div>
                 </div>
-                <div id="begin1">
+                <div id="begin1" class="mb-5">
                   <h4>Begin 1</h4>
                   <p>Дана сторона квадрата <span class="formula">a</span>.
                     Найти его периметр <span class="formula">P = 4⋅ a</span>.
@@ -133,11 +133,9 @@
                       <button id="btn_snippet_begin1" class="btn btn-outline-primary btn-sm">Запустить</button>
                     </div>
                     <div class="card-body p-0 user-select-none" >
-                      <ol class="text-muted mx-2 my-3 lh-sm font-monospace">
-                        <li><code class="language-javascript">let a = Number(prompt("Введите сторону квадрата"));</code></li>
-                        <li><code class="language-javascript">let P = 4 * a;</code></li>
-                        <li><code class="language-javascript">alert("Периметр квадрата: " + P);</code></li>
-                      </ol>
+                      <pre class="m-1"><code>let a = Number(prompt("Введите сторону квадрата"));
+let P = 4 * a;
+alert("Периметр квадрата: " + P);</code></pre>
                     </div>
                     <script text="javascript">
                       function snippet_begin1() {
@@ -151,7 +149,7 @@
                     </script>
                   </div>
                 </div>
-                <div id="begin2">
+                <div id="begin2" class="mb-5">
                   <h4>Begin 2</h4>
                   <p>Дана сторона квадрата <span class="formula">a</span>.
                     Найти его площадь <span class="formula">S = a<sup>2</sup></span>.
@@ -163,11 +161,9 @@
                       <button id="btn_snippet_begin2" class="btn btn-outline-primary btn-sm">Запустить</button>
                     </div>
                     <div class="card-body p-0 user-select-none">
-                      <ol class="text-muted mx-2 my-3 lh-sm font-monospace">
-                        <li><code class="language-javascript">let a = Number(prompt("Введите сторону квадрата"));</code></li>
-                        <li><code class="language-javascript">let S = a * a;</code></li>
-                        <li><code class="language-javascript">alert("Площадь квадрата: " + S);</code></li>
-                      </ol>
+                      <pre class="m-1"><code>let a = Number(prompt("Введите сторону квадрата"));
+let S = a * a;
+alert("Площадь квадрата: " + S);</code></pre>
                     </div>
                     <script text="javascript">
                       function snippet_begin2() {
@@ -181,7 +177,7 @@
                     </script>
                   </div>
                 </div>
-                <div id="begin3">
+                <div id="begin3" class="mb-5">
                   <h4 class="d-flex align-items-center">Begin 3 <small class="btn btn-outline-dark btn-sm disabled py-0 ms-3 ">Сложный</small></h4>
                   <p>Даны стороны прямоугольника <span class="formula">a</span> и
                     <span class="formula">b</span>.
@@ -194,14 +190,13 @@
                       <span class="card-text">Код решения</span>
                       <button id="btn_snippet_begin3" class="btn btn-outline-primary btn-sm">Запустить</button>
                     </div>
-                    <div class="card-body p-0 user-select-none">
-                      <ol class="text-muted mx-2 my-3 lh-sm font-monospace ">
-                        <li><code class="language-javascript">let a = Number(prompt("Введите сторону 'a' прямоугольника"));</code></li>
-                        <li><code class="language-javascript">let b = Number(prompt("Введите сторону 'b' прямоугольника"));</code></li>
-                        <li><code class="language-javascript">let S = a * b;</code></li>
-                        <li><code class="language-javascript">let P = 2 * (a + b);</code></li>
-                        <li><code class="language-javascript">alert("Площадь прямоугольника: " + S + "\n" + "Периметр прямоугольника: " + P);</code></li>
-                      </ol>
+                    <div class="card-body p-0 user-select-none overflow-hidden">
+                      <pre class="m-1"><code>let a = Number(prompt("Введите сторону 'a' прямоугольника"));
+let b = Number(prompt("Введите сторону 'b' прямоугольника"));
+let S = a * b;
+let P = 2 * (a + b);
+alert("Площадь прямоугольника: " + S + "\n" +
+      "Периметр прямоугольника: " + P);</code></pre>
                     </div>
                     <script text="javascript">
                       function snippet_begin3() {
@@ -218,7 +213,7 @@
                     </script>
                   </div>
                 </div>
-                <div id="begin4">
+                <div id="begin4" class="mb-5">
                   <h4>Begin 4</h4>
                   <p>Дан диаметр окружности <span class="formula">d</span>.
                     Найти её длину <span class="formula">L = π⋅ d</span>.
@@ -232,11 +227,9 @@
                       <button id="btn_snippet_begin4" class="btn btn-outline-primary btn-sm">Запустить</button>
                     </div>
                     <div class="card-body p-0 user-select-none">
-                      <ol class="text-muted mx-2 my-3 lh-sm font-monospace">
-                        <li><code class="language-javascript">let d = Number(prompt("Введите диаметр окружности"));</code></li>
-                        <li><code class="language-javascript">let L = 3.14 * d;</code></li>
-                        <li><code class="language-javascript">alert("Длина окружности: " + L);</code></li>
-                      </ol>
+                      <pre class="m-1"><code>let d = Number(prompt("Введите диаметр окружности"));
+let L = 3.14 * d;
+alert("Длина окружности: " + L);</code></pre>
                     </div>
                     <script text="javascript">
                       function snippet_begin4() {
@@ -250,7 +243,7 @@
                     </script>
                   </div>
                 </div>
-                <div id="begin5">
+                <div id="begin5" class="mb-5">
                   <h4>Begin 5</h4>
                   <p>Дана длина ребра куба <span class="formula">a</span>.
                     Найти объём куба <span class="formula">V = a<sup>3</sup></span>
@@ -263,12 +256,11 @@
                       <button id="btn_snippet_begin5" class="btn btn-outline-primary btn-sm">Запустить</button>
                     </div>
                     <div class="card-body p-0 user-select-none">
-                      <ol class="text-muted mx-2 my-3 lh-sm font-monospace">
-                        <li><code class="language-javascript">let a = Number(prompt("Введите длину ребра куба"));</code></li>
-                        <li><code class="language-javascript">let V = Math.pow(a, 3);</code></li>
-                        <li><code class="language-javascript">let S = 6 * Math.pow(a, 2);</code></li>
-                        <li><code class="language-javascript">alert("Объём куба: " + V + "\n" + "Площадь поверхности куба: " + S);</code></li>
-                      </ol>
+                      <pre class="m-1"><code>let a = Number(prompt("Введите длину ребра куба"));
+let V = Math.pow(a, 3);
+let S = 6 * Math.pow(a, 2);
+alert("Объём куба: " + V + "\n" +
+      "Площадь поверхности куба: " + S);</code></pre>
                     </div>
                     <script text="javascript">
                       function snippet_begin5() {
@@ -284,7 +276,7 @@
                     </script>
                   </div>
                 </div>
-                <div id="begin6">
+                <div id="begin6" class="mb-5">
                   <h4>Begin 6</h4>
                   <p>Даны длины рёбер <span class="formula">a</span>,
                     <span class="formula">b</span>, <span class="formula">c</span>
@@ -298,14 +290,13 @@
                       <button id="btn_snippet_begin6" class="btn btn-outline-primary btn-sm">Запустить</button>
                     </div>
                     <div class="card-body p-0 user-select-none">
-                      <ol class="text-muted mx-2 my-3 lh-sm font-monospace">
-                        <li><code class="language-javascript">let a = Number(prompt("Введите длину ребра 'a' параллелепипеда"));</code></li>
-                        <li><code class="language-javascript">let b = Number(prompt("Введите длину ребра 'b' параллелепипеда"));</code></li>
-                        <li><code class="language-javascript">let c = Number(prompt("Введите длину ребра 'c' параллелепипеда"));</code></li>
-                        <li><code class="language-javascript">let V = a * b * c;</code></li>
-                        <li><code class="language-javascript">let S = 2 * (a * b + b * c + a * c);</code></li>
-                        <li><code class="language-javascript">alert("Объём параллелепипеда: " + V + "\n" + "Площадь поверхности параллелепипеда: " + S);</code></li>
-                      </ol>
+                      <pre class="m-1"><code>let a = Number(prompt("Введите длину ребра 'a' параллелепипеда"));
+let b = Number(prompt("Введите длину ребра 'b' параллелепипеда"));
+let c = Number(prompt("Введите длину ребра 'c' параллелепипеда"));
+let V = a * b * c;
+let S = 2 * (a * b + b * c + a * c);
+alert("Объём параллелепипеда: " + V + "\n" +
+      "Площадь поверхности параллелепипеда: " + S);</code></pre>
                     </div>
                     <script text="javascript">
                       function snippet_begin6() {
@@ -323,7 +314,7 @@
                     </script>
                   </div>
                 </div>
-                <div id="begin7">
+                <div id="begin7" class="mb-5">
                   <h4 class="d-flex align-items-center">Begin 7 <small
                       class="btn btn-outline-dark btn-sm disabled py-0 ms-3 ">Сложный</small></h4>
                   <p>Найти длину окружности <span class="formula">L</span> и площадь круга <span class="formula">S</span>
@@ -337,12 +328,11 @@
                       <button id="btn_snippet_begin7" class="btn btn-outline-primary btn-sm">Запустить</button>
                     </div>
                     <div class="card-body p-0 user-select-none">
-                      <ol class="text-muted mx-2 my-3 lh-sm font-monospace">
-                        <li><code class="language-javascript">let R = Number(prompt("Введите радиус круга"));</code></li>
-                        <li><code class="language-javascript">let L = 2 * 3.14 * R;</code></li>
-                        <li><code class="language-javascript">let S = 3.14 * Math.pow(R, 2);</code></li>
-                        <li><code class="language-javascript">alert("Длина окружности: " + L + "\n" + "Площадь круга: " + S);</code></li>
-                      </ol>
+                      <pre class="m-1"><code>let R = Number(prompt("Введите радиус круга"));
+let L = 2 * 3.14 * R;
+let S = 3.14 * Math.pow(R, 2);
+alert("Длина окружности: " + L + "\n" +
+      "Площадь круга: " + S);</code></pre>
                     </div>
                     <script text="javascript">
                       function snippet_begin7() {
@@ -358,7 +348,7 @@
                     </script>
                   </div>
                 </div>
-                <div id="begin8">
+                <div id="begin8" class="mb-5">
                   <h4>Begin 8</h4>
                   <p>Даны два числа <span class="formula">a</span> и <span class="formula">b</span>.
                     Найти их <span class="fst-italic">среднее арифметическое</span>:
@@ -371,12 +361,10 @@
                       <button id="btn_snippet_begin8" class="btn btn-outline-primary btn-sm">Запустить</button>
                     </div>
                     <div class="card-body p-0 user-select-none">
-                      <ol class="text-muted mx-2 my-3 lh-sm font-monospace">
-                        <li><code class="language-javascript">let a = Number(prompt("Введите число 'a'"));</code></li>
-                        <li><code class="language-javascript">let b = Number(prompt("Введите число 'b'"));</code></li>
-                        <li><code class="language-javascript">let M = (a + b) / 2;</code></li>
-                        <li><code class="language-javascript">alert("Среднее арифметическое: " + M);</code></li>
-                      </ol>
+                      <pre class="m-1"><code>let a = Number(prompt("Введите число 'a'"));
+let b = Number(prompt("Введите число 'b'"));
+let M = (a + b) / 2;
+alert("Среднее арифметическое: " + M);</code></pre>
                     </div>
                     <script text="javascript">
                       function snippet_begin8() {
@@ -391,7 +379,7 @@
                     </script>
                   </div>
                 </div>
-                <div id="begin9">
+                <div id="begin9" class="mb-5">
                   <h4>Begin 9</h4>
                   <p>Даны два неотрицательных числа <span class="formula">a</span> и <span class="formula">b</span>.
                     Найти их <span class="fst-italic">среднее геометрическое</span>, то есть квадратный корень
@@ -404,12 +392,10 @@
                       <button id="btn_snippet_begin9" class="btn btn-outline-primary btn-sm">Запустить</button>
                     </div>
                     <div class="card-body p-0 user-select-none">
-                      <ol class="text-muted mx-2 my-3 lh-sm font-monospace">
-                        <li><code class="language-javascript">let a = Number(prompt("Введите неотрицательное число 'a'"));</code></li>
-                        <li><code class="language-javascript">let b = Number(prompt("Введите неотрицательное число 'b'"));</code></li>
-                        <li><code class="language-javascript">let G = Math.sqrt(a * b);</code></li>
-                        <li><code class="language-javascript">alert("Среднее геометрическое: " + G);</code></li>
-                      </ol>
+                      <pre class="m-1"><code>let a = Number(prompt("Введите неотрицательное число 'a'"));
+let b = Number(prompt("Введите неотрицательное число 'b'"));
+let G = Math.sqrt(a * b);
+alert("Среднее геометрическое: " + G);</code></pre>
                     </div>
                     <script text="javascript">
                       function snippet_begin9() {
@@ -436,16 +422,16 @@
                       <button id="btn_snippet_begin10" class="btn btn-outline-primary btn-sm">Запустить</button>
                     </div>
                     <div class="card-body p-0 user-select-none">
-                      <ol class="text-muted mx-2 my-3 lh-sm font-monospace">
-                        <li><code class="language-javascript">let a = Number(prompt("Введите первое ненулевое число"));</code></li>
-                        <li><code class="language-javascript">let b = Number(prompt("Введите второе ненулевое число"));</code></li>
-                        <li><code class="language-javascript">let Sum = (a * a) + (b * b);</code></li>
-                        <li><code class="language-javascript">let Dif = (a * a) - (b * b);</code></li>
-                        <li><code class="language-javascript">let Prd = (a * a) * (b * b);</code></li>
-                        <li><code class="language-javascript">let Qnt = (a * a) / (b * b);</code></li>
-                        <li><code class="language-javascript">alert("Сумма квадратов: " + Sum + "\n" + "Разность квадратов: " + Dif + "\n" +</code></li>
-                        <li><code class="language-javascript ps-5">"Произведение квадратов: " + Prd + "\n" + "Частное квадратов: " + Qnt);</code></li>
-                      </ol>
+                      <pre class="m-1"><code>let a = Number(prompt("Введите первое ненулевое число"));
+let b = Number(prompt("Введите второе ненулевое число"));
+let Sum = (a * a) + (b * b);
+let Dif = (a * a) - (b * b);
+let Prd = (a * a) * (b * b);
+let Qnt = (a * a) / (b * b);
+alert("Сумма квадратов: " + Sum + "\n" +
+      "Разность квадратов: " + Dif + "\n" +
+      "Произведение квадратов: " + Prd + "\n" +
+      "Частное квадратов: " + Qnt);</code></pre>
                     </div>
                     <script text="javascript">
                       function snippet_begin10() {
