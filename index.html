@@ -129,13 +129,35 @@
 
                   <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
-                      <span class="card-text">Код решения</span>
+                      <div class="nav nav-pills ms-1" id="begin1-tablist" role="tablist">
+                        <button class="nav-link py-1 btn-sm " id="begin1_js-tab" data-bs-toggle="pill" data-bs-target="#begin1_js-content" type="button" role="tab" aria-controls="begin1_js-content" aria-selected="true">JS</button>
+                        <button class="nav-link py-1 btn-sm active " id="begin1_java-tab" data-bs-toggle="pill" data-bs-target="#begin1_java-content" type="button" role="tab" aria-controls="begin1_java-content" aria-selected="false">Java</button>
+                      </div>
                       <button id="btn_snippet_begin1" class="btn btn-outline-primary btn-sm">Запустить</button>
                     </div>
-                    <div class="card-body p-0 user-select-none" >
-                      <pre class="m-1"><code>let a = Number(prompt("Введите сторону квадрата"));
+                    <div class="card-body tab-content p-0 user-select-none" >
+                      <div class="begin1_js-content tab-pane fade " id="begin1_js-content" role="tabpanel" aria-labelledby="begin1_js-tab">
+                        <pre class="m-1"><code>let a = Number(prompt("Введите сторону квадрата"));
 let P = 4 * a;
 alert("Периметр квадрата: " + P);</code></pre>
+                      </div>
+                      <div class="begin1_java-content tab-pane fade show active" id="begin1_java-content" role="tabpanel" aria-labelledby="begin1_java-tab">
+                        <pre class="m-1"><code>import java.util.Scanner;
+
+class JavaTasks_Begin1 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите сторону квадрата: ");
+        float a = scanner.nextFloat();
+
+        float P = 4 * a;
+
+        System.out.println("Периметр квадрата: " + P);
+        scanner.close();
+    }
+}</code></pre>
+                      </div>
                     </div>
                     <script text="javascript">
                       function snippet_begin1() {
@@ -157,13 +179,35 @@ alert("Периметр квадрата: " + P);</code></pre>
 
                   <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
-                      <span class="card-text">Код решения</span>
+                      <div class="nav nav-pills ms-1" id="begin2-tablist" role="tablist">
+                        <button class="nav-link py-1 btn-sm " id="begin2_js-tab" data-bs-toggle="pill" data-bs-target="#begin2_js-content" type="button" role="tab" aria-controls="begin2_js-content" aria-selected="true">JS</button>
+                        <button class="nav-link py-1 btn-sm active " id="begin2_java-tab" data-bs-toggle="pill" data-bs-target="#begin2_java-content" type="button" role="tab" aria-controls="begin2_java-content" aria-selected="false">Java</button>
+                      </div>
                       <button id="btn_snippet_begin2" class="btn btn-outline-primary btn-sm">Запустить</button>
                     </div>
-                    <div class="card-body p-0 user-select-none">
-                      <pre class="m-1"><code>let a = Number(prompt("Введите сторону квадрата"));
+                    <div class="card-body tab-content p-0 user-select-none" >
+                      <div class="begin2_js-content tab-pane fade " id="begin2_js-content" role="tabpanel" aria-labelledby="begin2_js-tab">
+                        <pre class="m-1"><code>let a = Number(prompt("Введите сторону квадрата"));
 let S = a * a;
-alert("Площадь квадрата: " + S);</code></pre>
+alert("Площадь квадрата: " + S); </code></pre>
+                      </div>
+                      <div class="begin2_java-content tab-pane fade show active" id="begin2_java-content" role="tabpanel" aria-labelledby="begin2_java-tab">
+                        <pre class="m-1"><code>import java.util.Scanner;
+
+class JavaTasks_Begin2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите сторону квадрата: ");
+        float a = scanner.nextFloat();
+
+        float S = a * a;
+
+        System.out.println("Площадь квадрата: " + S);
+        scanner.close();
+    }
+}</code></pre>
+                      </div>
                     </div>
                     <script text="javascript">
                       function snippet_begin2() {
@@ -176,6 +220,7 @@ alert("Площадь квадрата: " + S);</code></pre>
                       btn_snippet_begin2.addEventListener('click', () => snippet_begin2());
                     </script>
                   </div>
+
                 </div>
                 <div id="begin3" class="mb-5">
                   <h4 class="d-flex align-items-center">Begin 3 <small class="btn btn-outline-dark btn-sm disabled py-0 ms-3 ">Сложный</small></h4>
@@ -187,16 +232,43 @@ alert("Площадь квадрата: " + S);</code></pre>
 
                   <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
-                      <span class="card-text">Код решения</span>
+                      <div class="nav nav-pills ms-1" id="begin3-tablist" role="tablist">
+                        <button class="nav-link py-1 btn-sm " id="begin3_js-tab" data-bs-toggle="pill" data-bs-target="#begin3_js-content" type="button" role="tab" aria-controls="begin3_js-content" aria-selected="true">JS</button>
+                        <button class="nav-link py-1 btn-sm active " id="begin3_java-tab" data-bs-toggle="pill" data-bs-target="#begin3_java-content" type="button" role="tab" aria-controls="begin3_java-content" aria-selected="false">Java</button>
+                      </div>
                       <button id="btn_snippet_begin3" class="btn btn-outline-primary btn-sm">Запустить</button>
                     </div>
-                    <div class="card-body p-0 user-select-none overflow-hidden">
-                      <pre class="m-1"><code>let a = Number(prompt("Введите сторону 'a' прямоугольника"));
+                    <div class="card-body tab-content p-0 user-select-none" >
+                      <div class="begin3_js-content tab-pane fade " id="begin3_js-content" role="tabpanel" aria-labelledby="begin3_js-tab">
+                        <pre class="m-1"><code>let a = Number(prompt("Введите сторону 'a' прямоугольника"));
 let b = Number(prompt("Введите сторону 'b' прямоугольника"));
 let S = a * b;
 let P = 2 * (a + b);
 alert("Площадь прямоугольника: " + S + "\n" +
-      "Периметр прямоугольника: " + P);</code></pre>
+      "Периметр прямоугольника: " + P); </code></pre>
+                      </div>
+                      <div class="begin3_java-content tab-pane fade show active" id="begin3_java-content" role="tabpanel" aria-labelledby="begin3_java-tab">
+                        <pre class="m-1"><code>import java.util.Scanner;
+
+class JavaTasks_Begin3 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите сторону 'a' прямоугольника: ");
+        float a = scanner.nextFloat();
+
+        System.out.print("Введите сторону 'b' прямоугольника: ");
+        float b = scanner.nextFloat();
+
+        float S = a * b;
+        float P = 2 * (a + b);
+
+        System.out.println("Площадь прямоугольника: " + S);
+        System.out.println("Периметр прямоугольника: " + P);
+        scanner.close();
+    }
+}</code></pre>
+                      </div>
                     </div>
                     <script text="javascript">
                       function snippet_begin3() {
@@ -205,7 +277,7 @@ alert("Площадь прямоугольника: " + S + "\n" +
                         let S = a * b;
                         let P = 2 * (a + b);
                         alert("Площадь прямоугольника: " + S + "\n" +
-                          "Периметр прямоугольника: " + P);
+                              "Периметр прямоугольника: " + P);
                       }
 
                       let btn_snippet_begin3 = document.getElementById("btn_snippet_begin3");
@@ -223,13 +295,35 @@ alert("Площадь прямоугольника: " + S + "\n" +
 
                   <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
-                      <span class="card-text">Код решения</span>
+                      <div class="nav nav-pills ms-1" id="begin4-tablist" role="tablist">
+                        <button class="nav-link py-1 btn-sm " id="begin4_js-tab" data-bs-toggle="pill" data-bs-target="#begin4_js-content" type="button" role="tab" aria-controls="begin4_js-content" aria-selected="true">JS</button>
+                        <button class="nav-link py-1 btn-sm active " id="begin4_java-tab" data-bs-toggle="pill" data-bs-target="#begin4_java-content" type="button" role="tab" aria-controls="begin4_java-content" aria-selected="false">Java</button>
+                      </div>
                       <button id="btn_snippet_begin4" class="btn btn-outline-primary btn-sm">Запустить</button>
                     </div>
-                    <div class="card-body p-0 user-select-none">
-                      <pre class="m-1"><code>let d = Number(prompt("Введите диаметр окружности"));
+                    <div class="card-body tab-content p-0 user-select-none" >
+                      <div class="begin4_js-content tab-pane fade " id="begin4_js-content" role="tabpanel" aria-labelledby="begin4_js-tab">
+                        <pre class="m-1"><code>let d = Number(prompt("Введите диаметр окружности"));
 let L = 3.14 * d;
-alert("Длина окружности: " + L);</code></pre>
+alert("Длина окружности: " + L); </code></pre>
+                      </div>
+                      <div class="begin4_java-content tab-pane fade show active" id="begin4_java-content" role="tabpanel" aria-labelledby="begin4_java-tab">
+                        <pre class="m-1"><code>import java.util.Scanner;
+
+class JavaTasks_Begin4 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите диаметр окружности: ");
+        float d = scanner.nextFloat();
+
+        float L = 3.14f * d;
+
+        System.out.println("Длина окружности: " + L);
+        scanner.close();
+    }
+}</code></pre>
+                      </div>
                     </div>
                     <script text="javascript">
                       function snippet_begin4() {
@@ -252,15 +346,39 @@ alert("Длина окружности: " + L);</code></pre>
 
                   <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
-                      <span class="card-text">Код решения</span>
+                      <div class="nav nav-pills ms-1" id="begin5-tablist" role="tablist">
+                        <button class="nav-link py-1 btn-sm " id="begin5_js-tab" data-bs-toggle="pill" data-bs-target="#begin5_js-content" type="button" role="tab" aria-controls="begin5_js-content" aria-selected="true">JS</button>
+                        <button class="nav-link py-1 btn-sm active " id="begin5_java-tab" data-bs-toggle="pill" data-bs-target="#begin5_java-content" type="button" role="tab" aria-controls="begin5_java-content" aria-selected="false">Java</button>
+                      </div>
                       <button id="btn_snippet_begin5" class="btn btn-outline-primary btn-sm">Запустить</button>
                     </div>
-                    <div class="card-body p-0 user-select-none">
-                      <pre class="m-1"><code>let a = Number(prompt("Введите длину ребра куба"));
+                    <div class="card-body tab-content p-0 user-select-none" >
+                      <div class="begin5_js-content tab-pane fade " id="begin5_js-content" role="tabpanel" aria-labelledby="begin5_js-tab">
+                        <pre class="m-1"><code>let a = Number(prompt("Введите длину ребра куба"));
 let V = Math.pow(a, 3);
 let S = 6 * Math.pow(a, 2);
 alert("Объём куба: " + V + "\n" +
-      "Площадь поверхности куба: " + S);</code></pre>
+      "Площадь поверхности куба: " + S); </code></pre>
+                      </div>
+                      <div class="begin5_java-content tab-pane fade show active" id="begin5_java-content" role="tabpanel" aria-labelledby="begin5_java-tab">
+                        <pre class="m-1"><code>import java.util.Scanner;
+
+class JavaTasks_Begin5 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите длину ребра куба: ");
+        float a = scanner.nextFloat();
+
+        float V = (float) Math.pow(a, 3);
+        float S = 6 * (float) Math.pow(a, 2);
+
+        System.out.println("Объём куба: " + V);
+        System.out.println("Площадь поверхности куба: " + S);
+        scanner.close();
+    }
+}</code></pre>
+                      </div>
                     </div>
                     <script text="javascript">
                       function snippet_begin5() {
@@ -286,17 +404,47 @@ alert("Объём куба: " + V + "\n" +
 
                   <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
-                      <span class="card-text">Код решения</span>
+                      <div class="nav nav-pills ms-1" id="begin6-tablist" role="tablist">
+                        <button class="nav-link py-1 btn-sm " id="begin6_js-tab" data-bs-toggle="pill" data-bs-target="#begin6_js-content" type="button" role="tab" aria-controls="begin6_js-content" aria-selected="true">JS</button>
+                        <button class="nav-link py-1 btn-sm active " id="begin6_java-tab" data-bs-toggle="pill" data-bs-target="#begin6_java-content" type="button" role="tab" aria-controls="begin6_java-content" aria-selected="false">Java</button>
+                      </div>
                       <button id="btn_snippet_begin6" class="btn btn-outline-primary btn-sm">Запустить</button>
                     </div>
-                    <div class="card-body p-0 user-select-none">
-                      <pre class="m-1"><code>let a = Number(prompt("Введите длину ребра 'a' параллелепипеда"));
+                    <div class="card-body tab-content p-0 user-select-none" >
+                      <div class="begin6_js-content tab-pane fade " id="begin6_js-content" role="tabpanel" aria-labelledby="begin6_js-tab">
+                        <pre class="m-1"><code>let a = Number(prompt("Введите длину ребра 'a' параллелепипеда"));
 let b = Number(prompt("Введите длину ребра 'b' параллелепипеда"));
 let c = Number(prompt("Введите длину ребра 'c' параллелепипеда"));
 let V = a * b * c;
 let S = 2 * (a * b + b * c + a * c);
 alert("Объём параллелепипеда: " + V + "\n" +
-      "Площадь поверхности параллелепипеда: " + S);</code></pre>
+      "Площадь поверхности параллелепипеда: " + S); </code></pre>
+                      </div>
+                      <div class="begin6_java-content tab-pane fade show active" id="begin6_java-content" role="tabpanel" aria-labelledby="begin6_java-tab">
+                        <pre class="m-1"><code>import java.util.Scanner;
+
+class JavaTasks_Begin6 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите длину ребра 'a' параллелепипеда: ");
+        float a = scanner.nextFloat();
+
+        System.out.print("Введите длину ребра 'b' параллелепипеда: ");
+        float b = scanner.nextFloat();
+
+        System.out.print("Введите длину ребра 'c' параллелепипеда: ");
+        float c = scanner.nextFloat();
+
+        float V = a * b * c;
+        float S = 2 * (a * b + b * c + a * c);
+
+        System.out.println("Объём параллелепипеда: " + V);
+        System.out.println("Площадь поверхности: " + S);
+        scanner.close();
+    }
+}</code></pre>
+                      </div>
                     </div>
                     <script text="javascript">
                       function snippet_begin6() {
@@ -324,15 +472,39 @@ alert("Объём параллелепипеда: " + V + "\n" +
 
                   <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
-                      <span class="card-text">Код решения</span>
+                      <div class="nav nav-pills ms-1" id="begin7-tablist" role="tablist">
+                        <button class="nav-link py-1 btn-sm " id="begin7_js-tab" data-bs-toggle="pill" data-bs-target="#begin7_js-content" type="button" role="tab" aria-controls="begin7_js-content" aria-selected="true">JS</button>
+                        <button class="nav-link py-1 btn-sm active " id="begin7_java-tab" data-bs-toggle="pill" data-bs-target="#begin7_java-content" type="button" role="tab" aria-controls="begin7_java-content" aria-selected="false">Java</button>
+                      </div>
                       <button id="btn_snippet_begin7" class="btn btn-outline-primary btn-sm">Запустить</button>
                     </div>
-                    <div class="card-body p-0 user-select-none">
-                      <pre class="m-1"><code>let R = Number(prompt("Введите радиус круга"));
+                    <div class="card-body tab-content p-0 user-select-none" >
+                      <div class="begin7_js-content tab-pane fade " id="begin7_js-content" role="tabpanel" aria-labelledby="begin7_js-tab">
+                        <pre class="m-1"><code>let R = Number(prompt("Введите радиус круга"));
 let L = 2 * 3.14 * R;
 let S = 3.14 * Math.pow(R, 2);
 alert("Длина окружности: " + L + "\n" +
-      "Площадь круга: " + S);</code></pre>
+      "Площадь круга: " + S); </code></pre>
+                      </div>
+                      <div class="begin7_java-content tab-pane fade show active" id="begin7_java-content" role="tabpanel" aria-labelledby="begin7_java-tab">
+                        <pre class="m-1"><code>import java.util.Scanner;
+
+class JavaTasks_Begin7 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите радиус круга: ");
+        float R = scanner.nextFloat();
+
+        float L = 2 * 3.14f * R;
+        float S = 3.14f * (float) Math.pow(R, 2);
+
+        System.out.println("Длина окружности: " + L);
+        System.out.println("Площадь круга: " + S);
+        scanner.close();
+    }
+}</code></pre>
+                      </div>
                     </div>
                     <script text="javascript">
                       function snippet_begin7() {
@@ -357,14 +529,39 @@ alert("Длина окружности: " + L + "\n" +
 
                   <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
-                      <span class="card-text">Код решения</span>
+                      <div class="nav nav-pills ms-1" id="begin8-tablist" role="tablist">
+                        <button class="nav-link py-1 btn-sm " id="begin8_js-tab" data-bs-toggle="pill" data-bs-target="#begin8_js-content" type="button" role="tab" aria-controls="begin8_js-content" aria-selected="true">JS</button>
+                        <button class="nav-link py-1 btn-sm active " id="begin8_java-tab" data-bs-toggle="pill" data-bs-target="#begin8_java-content" type="button" role="tab" aria-controls="begin8_java-content" aria-selected="false">Java</button>
+                      </div>
                       <button id="btn_snippet_begin8" class="btn btn-outline-primary btn-sm">Запустить</button>
                     </div>
-                    <div class="card-body p-0 user-select-none">
-                      <pre class="m-1"><code>let a = Number(prompt("Введите число 'a'"));
+                    <div class="card-body tab-content p-0 user-select-none" >
+                      <div class="begin8_js-content tab-pane fade " id="begin8_js-content" role="tabpanel" aria-labelledby="begin8_js-tab">
+                        <pre class="m-1"><code>let a = Number(prompt("Введите число 'a'"));
 let b = Number(prompt("Введите число 'b'"));
 let M = (a + b) / 2;
-alert("Среднее арифметическое: " + M);</code></pre>
+alert("Среднее арифметическое: " + M); </code></pre>
+                      </div>
+                      <div class="begin8_java-content tab-pane fade show active" id="begin8_java-content" role="tabpanel" aria-labelledby="begin8_java-tab">
+                        <pre class="m-1"><code>import java.util.Scanner;
+
+class JavaTasks_Begin8 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите число 'a': ");
+        float a = scanner.nextFloat();
+
+        System.out.print("Введите число 'b': ");
+        float b = scanner.nextFloat();
+
+        float M = (a + b) / 2;
+
+        System.out.println("Среднее арифметическое: " + M);
+        scanner.close();
+    }
+}</code></pre>
+                      </div>
                     </div>
                     <script text="javascript">
                       function snippet_begin8() {
@@ -388,14 +585,39 @@ alert("Среднее арифметическое: " + M);</code></pre>
 
                   <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
-                      <span class="card-text">Код решения</span>
+                      <div class="nav nav-pills ms-1" id="begin9-tablist" role="tablist">
+                        <button class="nav-link py-1 btn-sm " id="begin9_js-tab" data-bs-toggle="pill" data-bs-target="#begin9_js-content" type="button" role="tab" aria-controls="begin9_js-content" aria-selected="true">JS</button>
+                        <button class="nav-link py-1 btn-sm active " id="begin9_java-tab" data-bs-toggle="pill" data-bs-target="#begin9_java-content" type="button" role="tab" aria-controls="begin9_java-content" aria-selected="false">Java</button>
+                      </div>
                       <button id="btn_snippet_begin9" class="btn btn-outline-primary btn-sm">Запустить</button>
                     </div>
-                    <div class="card-body p-0 user-select-none">
-                      <pre class="m-1"><code>let a = Number(prompt("Введите неотрицательное число 'a'"));
+                    <div class="card-body tab-content p-0 user-select-none" >
+                      <div class="begin9_js-content tab-pane fade " id="begin9_js-content" role="tabpanel" aria-labelledby="begin9_js-tab">
+                        <pre class="m-1"><code>let a = Number(prompt("Введите неотрицательное число 'a'"));
 let b = Number(prompt("Введите неотрицательное число 'b'"));
 let G = Math.sqrt(a * b);
-alert("Среднее геометрическое: " + G);</code></pre>
+alert("Среднее геометрическое: " + G); </code></pre>
+                      </div>
+                      <div class="begin9_java-content tab-pane fade show active" id="begin9_java-content" role="tabpanel" aria-labelledby="begin9_java-tab">
+                        <pre class="m-1"><code>import java.util.Scanner;
+
+class JavaTasks_Begin9 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите неотрицательное число 'a': ");
+        float a = scanner.nextFloat();
+
+        System.out.print("Введите неотрицательное число 'b': ");
+        float b = scanner.nextFloat();
+
+        float G = (float) Math.sqrt(a * b);
+
+        System.out.println("Среднее геометрическое: " + G);
+        scanner.close();
+    }
+}</code></pre>
+                      </div>
                     </div>
                     <script text="javascript">
                       function snippet_begin9() {
@@ -418,11 +640,15 @@ alert("Среднее геометрическое: " + G);</code></pre>
 
                   <div class="card">
                     <div class="card-header d-flex justify-content-between align-items-center">
-                      <span class="card-text">Код решения</span>
+                      <div class="nav nav-pills ms-1" id="begin10-tablist" role="tablist">
+                        <button class="nav-link py-1 btn-sm " id="begin10_js-tab" data-bs-toggle="pill" data-bs-target="#begin10_js-content" type="button" role="tab" aria-controls="begin10_js-content" aria-selected="true">JS</button>
+                        <button class="nav-link py-1 btn-sm active " id="begin10_java-tab" data-bs-toggle="pill" data-bs-target="#begin10_java-content" type="button" role="tab" aria-controls="begin10_java-content" aria-selected="false">Java</button>
+                      </div>
                       <button id="btn_snippet_begin10" class="btn btn-outline-primary btn-sm">Запустить</button>
                     </div>
-                    <div class="card-body p-0 user-select-none">
-                      <pre class="m-1"><code>let a = Number(prompt("Введите первое ненулевое число"));
+                    <div class="card-body tab-content p-0 user-select-none" >
+                      <div class="begin10_js-content tab-pane fade " id="begin10_js-content" role="tabpanel" aria-labelledby="begin10_js-tab">
+                        <pre class="m-1"><code>let a = Number(prompt("Введите первое ненулевое число"));
 let b = Number(prompt("Введите второе ненулевое число"));
 let Sum = (a * a) + (b * b);
 let Dif = (a * a) - (b * b);
@@ -431,7 +657,34 @@ let Qnt = (a * a) / (b * b);
 alert("Сумма квадратов: " + Sum + "\n" +
       "Разность квадратов: " + Dif + "\n" +
       "Произведение квадратов: " + Prd + "\n" +
-      "Частное квадратов: " + Qnt);</code></pre>
+      "Частное квадратов: " + Qnt); </code></pre>
+                      </div>
+                      <div class="begin10_java-content tab-pane fade show active" id="begin10_java-content" role="tabpanel" aria-labelledby="begin10_java-tab">
+                        <pre class="m-1"><code>import java.util.Scanner;
+
+class JavaTasks_Begin10 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите первое ненулевое число: ");
+        float a = scanner.nextFloat();
+
+        System.out.print("Введите второе ненулевое число: ");
+        float b = scanner.nextFloat();
+
+        float Sum = (a * a) + (b * b);
+        float Dif = (a * a) - (b * b);
+        float Prd = (a * a) * (b * b);
+        float Qnt = (a * a) / (b * b);
+
+        System.out.println("Сумма квадратов: " + Sum);
+        System.out.println("Разность квадратов: " + Dif);
+        System.out.println("Произведение квадратов: " + Prd);
+        System.out.println("Частное квадратов: " + Qnt);
+        scanner.close();
+    }
+}</code></pre>
+                      </div>
                     </div>
                     <script text="javascript">
                       function snippet_begin10() {
