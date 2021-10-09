@@ -2,147 +2,162 @@
 <html lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="css/bootstrap.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/highlight/github.min.css">
+    <meta name="theme-color" content="#F8F9FA" />
 
-  <title>JS Tasks</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/highlight/github.min.css">
+    <link rel="stylesheet" href="css/codetasks.css">
+
+    <title>Code Tasks</title>
 </head>
 
 <body>
-  <header class="navbar navbar-expand-sm navbar-light bg-light py-lg-3" id="siteHeader">
-    <div class="container container-fluid">
-      <a class="navbar-brand" href="#">
-        <span class="bg-primary text-light rounded px-1">Code</span>
-        Tasks
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
-        <span class="navbar-text user-select-none lh-1 me-1">Решение задач по программированию от Максима Пескова</span>
-
-        <div class="navbar-nav">
-          <a href="https://github.com/KostarSf/college_js_tasks" class="nav-link text-nowrap">
-            Source
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github"
-              viewBox="0 0 16 16">
-              <path
-                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-            </svg>
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </header>
-
-  <div class="container mt-3">
-    <div class="row">
-      <aside class="col-md-3 col-xl-2">
-        <div class="sticky-top pt-3 mb-4">
-          <nav class="list-group list-group-flush" id="list-tab" role="tablist">
-            <a class="list-group-item list-group-item-action active d-flex justify-content-between align-items-center"
-              id="list-begin-list" data-bs-toggle="list" role="tab" href="#list-begin" aria-controls="list-begin">
-              Begin <span class="badge bg-primary rounded-pill">10</span>
+    <header class="navbar navbar-expand-md navbar-light bg-light ct-navbar py-lg-3 px-lg-2">
+        <nav class="container-xxl" aria-label="Основная навигация">
+            <a href="/" class="navbar-brand ct-brand">
+                <span class="bg-primary text-white px-2 rounded-3">Code</span> Tasks
             </a>
-            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center disabled"
-              id="list-integer-list" data-bs-toggle="list" role="tab" href="#list-integer" aria-controls="list-integer">
-              Integer <span class="badge rounded-pill text-secondary">0</span>
-            </a>
-            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center disabled"
-              id="list-boolean-list" data-bs-toggle="list" role="tab" href="#list-boolean" aria-controls="list-boolean">
-              Boolean <span class="badge rounded-pill text-secondary">0</span>
-            </a>
-            <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center disabled"
-              id="list-if-list" data-bs-toggle="list" role="tab" href="#list-if" aria-controls="list-if">
-              If <span class="badge rounded-pill text-secondary">0</span>
-            </a>
-          </nav>
-          <!-- <p class="p-3 text-muted ">В процессе заполнения..</p> -->
-        </div>
-      </aside>
-      <main class="col-md-9 col-xl-10">
-        <div class="tab-content" id="nav-tabContent">
-          <div class="tab-pane fade show active" id="list-begin" role="tabpanel" aria-labelledby="list-begin-list">
-            <div class="row mb-5">
-              <div class="d-none d-sm-block col-sm-3 text-muted order-first order-sm-last">
-                <div class="sticky-top">
-                  <span class="d-block px-3 py-2 mb-2 border-bottom">Навигация</span>
-                  <nav class="nav nav-pills flex-sm-column" id="page-nav">
-                    <a href="#begin1" class="nav-link px-2"><span class="px-2">Begin 1</span></a>
-                    <a href="#begin2" class="nav-link px-2"><span class="px-2">Begin 2</span></a>
-                    <a href="#begin3" class="nav-link px-2"><span class="border border-primary rounded-2 px-2">Begin 3</span></a>
-                    <a href="#begin4" class="nav-link px-2"><span class="px-2">Begin 4</span></a>
-                    <a href="#begin5" class="nav-link px-2"><span class="px-2">Begin 5</span></a>
-                    <a href="#begin6" class="nav-link px-2"><span class="px-2">Begin 6</span></a>
-                    <a href="#begin7" class="nav-link px-2"><span class="border border-primary rounded-2 px-2">Begin 7</span></a>
-                    <a href="#begin8" class="nav-link px-2"><span class="px-2">Begin 8</span></a>
-                    <a href="#begin9" class="nav-link px-2"><span class="px-2">Begin 9</span></a>
-                    <a href="#begin10" class="nav-link px-2"><span class="px-2">Begin 10</span></a>
-                  </nav>
-                  <div class="d-none d-sm-block">
-                    <a href="#" class="d-block px-3 py-2 pb-0 mt-3 link-secondary border-top">
-                      Наверх
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-arrow-up" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                          d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-9 pt-3">
-                <div class="mb-5">
-                  <img src="img/head_image_begin.jpg" alt="head_image_begin" class="img-fluid">
-                  <p class="lead mt-3">Ввод и вывод данных, оператор присваивания.</p>
-                  <p class="lead">Все входные и выходные данные в заданиях этой группы являются вещественными числами.
-                  </p>
-                  <div class="d-sm-none">
-                    <span class="d-block px-3 py-2 mb-2 border-bottom">Навигация</span>
-                    <nav class="nav nav-pills " id="page-nav">
-                      <a href="#begin1" class="nav-link px-2"><span class="px-2">Begin 1</span></a>
-                      <a href="#begin2" class="nav-link px-2"><span class="px-2">Begin 2</span></a>
-                      <a href="#begin3" class="nav-link px-2"><span class="border border-primary rounded-2 px-2">Begin 3</span></a>
-                      <a href="#begin4" class="nav-link px-2"><span class="px-2">Begin 4</span></a>
-                      <a href="#begin5" class="nav-link px-2"><span class="px-2">Begin 5</span></a>
-                      <a href="#begin6" class="nav-link px-2"><span class="px-2">Begin 6</span></a>
-                      <a href="#begin7" class="nav-link px-2"><span class="border border-primary rounded-2 px-2">Begin 7</span></a>
-                      <a href="#begin8" class="nav-link px-2"><span class="px-2">Begin 8</span></a>
-                      <a href="#begin9" class="nav-link px-2"><span class="px-2">Begin 9</span></a>
-                      <a href="#begin10" class="nav-link px-2"><span class="px-2">Begin 10</span></a>
-                    </nav>
-                  </div>
-                </div>
-                <div id="begin1" class="mb-5">
-                  <h4>Begin 1</h4>
-                  <p>Дана сторона квадрата <span class="formula">a</span>.
-                    Найти его периметр <span class="formula">P = 4⋅ a</span>.
-                  </p>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ctNavbar" aria-controls="ctNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="ctNavbar">
+                <span class="navbar-text">
+                    Решение задач по программированию
+                    <span class="text-nowrap">от Максима Пескова</span>
+                </span>
+                <hr class="d-md-none ct-hr">
+                <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+                    <li class="nav-item col-6 col-md-auto">
+                        <a class="nav-link p-2" href="https://github.com/KostarSf/" target="_blank" rel="noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="navbar-nav-svg d-inline-block align-text-top" viewBox="0 0 512 499.36" role="img">
+                                <title>GitHub</title>
+                                <path fill="currentColor" fill-rule="evenodd"
+                                    d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z">
+                                </path>
+                            </svg>
+                            <small class="d-md-none ms-2">GitHub</small>
+                        </a>
+                    </li>
+                    <li class="nav-item col-6 col-md-auto">
+                        <a class="nav-link p-2" href="https://vk.com/shainert" target="_blank" rel="noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="navbar-nav-svg d-inline-block align-text-top" viewBox="2 2 21 21" role="img">
+                                <title>VK</title>
+                                <path fill="currentColor" fill-rule="evenodd"
+                                d="M15.07294,2H8.9375C3.33331,2,2,3.33331,2,8.92706V15.0625C2,20.66663,3.32294,22,8.92706,22H15.0625C20.66669,22,22,20.67706,22,15.07288V8.9375C22,3.33331,20.67706,2,15.07294,2Zm3.07287,14.27081H16.6875c-.55206,0-.71875-.44793-1.70831-1.4375-.86463-.83331-1.22919-.9375-1.44794-.9375-.30206,0-.38544.08332-.38544.5v1.3125c0,.35419-.11456.5625-1.04162.5625a5.69214,5.69214,0,0,1-4.44794-2.66668A11.62611,11.62611,0,0,1,5.35419,8.77081c0-.21875.08331-.41668.5-.41668H7.3125c.375,0,.51044.16668.65625.55212.70831,2.08331,1.91669,3.89581,2.40625,3.89581.1875,0,.27081-.08331.27081-.55206V10.10413c-.0625-.97913-.58331-1.0625-.58331-1.41663a.36008.36008,0,0,1,.375-.33337h2.29169c.3125,0,.41662.15625.41662.53125v2.89587c0,.3125.13544.41663.22919.41663.1875,0,.33331-.10413.67706-.44788a11.99877,11.99877,0,0,0,1.79169-2.97919.62818.62818,0,0,1,.63544-.41668H17.9375c.4375,0,.53125.21875.4375.53125A18.20507,18.20507,0,0,1,16.41669,12.25c-.15625.23956-.21875.36456,0,.64581.14581.21875.65625.64582,1,1.05207a6.48553,6.48553,0,0,1,1.22912,1.70837C18.77081,16.0625,18.5625,16.27081,18.14581,16.27081Z">
+                                </path>
+                            </svg>
+                            <small class="d-md-none ms-2">VK</small>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container-xxl my-md-4 ct-layout">
+        <aside class="ct-sidebar ps-lg-2 ps-xxl-0">
+            <button
+                class="btn bg-light btn-outline-secondary ct-sidebar-toggle ct-navbar-sticky-button d-md-none py-0 px-1 ms-auto order-3 collapsed"
+                type="button" data-bs-toggle="collapse" data-bs-target="#ct-sections-nav" aria-controls="ct-sections-nav"
+                aria-expanded="false" aria-label="Переключить навигацию по секциям">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-expand" fill="currentColor"
+                    viewBox="0 0 16 16">
+                    <title>Expand</title>
+                    <path fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10z">
+                    </path>
+                </svg>
 
-                  <div class="card">
-                    <div class="card-header d-flex justify-content-between align-items-center">
-                      <div class="nav nav-pills ms-1" id="begin1-tablist" role="tablist">
-                        <button class="nav-link py-1 btn-sm " id="begin1_js-tab" data-bs-toggle="pill" data-bs-target="#begin1_js-content" type="button" role="tab" aria-controls="begin1_js-content" aria-selected="true">JS</button>
-                        <button class="nav-link py-1 btn-sm active " id="begin1_java-tab" data-bs-toggle="pill" data-bs-target="#begin1_java-content" type="button" role="tab" aria-controls="begin1_java-content" aria-selected="false">Java</button>
-                      </div>
-                      <button id="btn_snippet_begin1" class="btn btn-outline-primary btn-sm">Запустить</button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-collapse" fill="currentColor"
+                    viewBox="0 0 16 16">
+                    <title>Collapse</title>
+                    <path fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zm7-8a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 4.293V.5A.5.5 0 0 1 8 0zm-.5 11.707l-1.146 1.147a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 11.707V15.5a.5.5 0 0 1-1 0v-3.793z">
+                    </path>
+                </svg>
+                Меню секций
+            </button>
+            <nav class="collapse ct-links " id="ct-sections-nav" aria-label="Навигация по секциям">
+                <hr class="d-md-none m-0 mx-2">
+                <ul class="list-unstyled mb-0 py-3 pt-md-1">
+                    <li class="mb-1">
+                        <button class="btn d-inline-flex align-items-center rounded collapsed disabled" data-bs-toggle="collapse"
+                            data-bs-target="#tasks-collapse" aria-expanded="true">
+                            Задачи
+                        </button>
+                        <div class="collapse show" id="tasks-collapse">
+                            <ul class="list-unstyled fw-normal pb-1 small">
+                                <li><a href="#" class="d-inline-flex align-items-center rounded active">Begin <span class="badge ct-badge ms-2">10</span></a></li>
+                                <li><a href="#" class="d-inline-flex align-items-center rounded">Integer<span class="badge ct-badge ms-2">0</span></a></li>
+                                <li><a href="#" class="d-inline-flex align-items-center rounded">Boolean<span class="badge ct-badge ms-2">0</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="ct-main order-1">
+            <div class="ct-intro ps-lg-4 mt-3">
+                <div class="card text-white ct-head-image">
+                    <img src="img/tasks_begin_head.jpg" alt="head_image_begin" class="card-img">
+                    <div class="card-img-overlay d-flex flex-column">
+                        <h2 class="card-title display-2 mt-auto">
+                            Programming <br> Begin Tasks
+                        </h2>
                     </div>
-                    <div class="card-body tab-content p-0 user-select-none" >
-                      <div class="begin1_js-content tab-pane fade " id="begin1_js-content" role="tabpanel" aria-labelledby="begin1_js-tab">
-                        <pre class="m-1"><code>let a = Number(prompt("Введите сторону квадрата"));
+                </div>
+                <p class="lead mt-3">Ввод и вывод данных, оператор присваивания.</p>
+                <p class="lead">Все входные и выходные данные в заданиях этой группы являются вещественными числами.
+                </p>
+            </div>
+            <div class="ct-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted pe-lg-2 pe-xxl-0">
+                <strong class="d-block h6 my-2 pb-2 border-bottom">Навигация</strong>
+                <nav id="tableOfContents">
+                    <ul class="d-flex flex-wrap  d-lg-block">
+                        <li ><a href="#begin_1">Begin 1</a></li>
+                        <li ><a href="#begin_2">Begin 2</a></li>
+                        <li ><a href="#begin_3">Begin 3</a><span class="badge ct-badge-difficult ms-2">Сложный</span></li>
+                        <li ><a href="#begin_4">Begin 4</a></li>
+                        <li ><a href="#begin_5">Begin 5</a></li>
+                        <li ><a href="#begin_6">Begin 6</a></li>
+                        <li ><a href="#begin_7">Begin 7</a><span class="badge ct-badge-difficult ms-2">Сложный</span></li>
+                        <li ><a href="#begin_8">Begin 8</a></li>
+                        <li ><a href="#begin_9">Begin 9</a></li>
+                        <li ><a href="#begin_10">Begin 10</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="ct-content ps-lg-4">
+                <h3 id="begin_1">Begin 1</h3>
+                <p>Дана сторона квадрата <span class="formula">a</span>. Найти его периметр <span class="formula">P = 4⋅ a</span>.
+                </p>
+
+                <div class="card ct-code-snippet-card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <div class="nav nav-pills ms-1" id="begin1-tablist" role="tablist">
+                            <button class="nav-link py-1 btn-sm " id="begin1_js-tab" data-bs-toggle="pill"
+                                data-bs-target="#begin1_js-content" type="button" role="tab" aria-controls="begin1_js-content"
+                                aria-selected="true">JS</button>
+                            <button class="nav-link py-1 btn-sm active " id="begin1_java-tab" data-bs-toggle="pill"
+                                data-bs-target="#begin1_java-content" type="button" role="tab" aria-controls="begin1_java-content"
+                                aria-selected="false">Java</button>
+                        </div>
+                        <button id="btn_snippet_begin1" class="btn btn-outline-primary btn-sm">Запустить</button>
+                    </div>
+                    <div class="card-body tab-content p-0 user-select-none">
+                        <div class="begin1_js-content tab-pane fade " id="begin1_js-content" role="tabpanel"
+                            aria-labelledby="begin1_js-tab">
+                            <pre class="m-1"><code>let a = Number(prompt("Введите сторону квадрата"));
 let P = 4 * a;
 alert("Периметр квадрата: " + P);</code></pre>
-                      </div>
-                      <div class="begin1_java-content tab-pane fade show active" id="begin1_java-content" role="tabpanel" aria-labelledby="begin1_java-tab">
-                        <pre class="m-1"><code>import java.util.Scanner;
+                        </div>
+                        <div class="begin1_java-content tab-pane fade show active" id="begin1_java-content" role="tabpanel"
+                            aria-labelledby="begin1_java-tab">
+                            <pre class="m-1"><code>import java.util.Scanner;
 
 class JavaTasks_Begin1 {
     public static void main(String[] args) {
@@ -157,42 +172,47 @@ class JavaTasks_Begin1 {
         scanner.close();
     }
 }</code></pre>
-                      </div>
+                        </div>
                     </div>
-                    <script text="javascript">
-                      function snippet_begin1() {
-                        let a = Number(prompt("Введите сторону квадрата"));
-                        let P = 4 * a;
-                        alert("Периметр квадрата: " + P);
-                      }
+                    <script>
+                        function snippet_begin1() {
+                            let a = Number(prompt("Введите сторону квадрата"));
+                            let P = 4 * a;
+                            alert("Периметр квадрата: " + P);
+                        }
 
-                      let btn_snippet_begin1 = document.getElementById("btn_snippet_begin1");
-                      btn_snippet_begin1.addEventListener('click', () => snippet_begin1());
+                        let btn_snippet_begin1 = document.getElementById("btn_snippet_begin1");
+                        btn_snippet_begin1.addEventListener('click', () => snippet_begin1());
                     </script>
-                  </div>
                 </div>
-                <div id="begin2" class="mb-5">
-                  <h4>Begin 2</h4>
-                  <p>Дана сторона квадрата <span class="formula">a</span>.
-                    Найти его площадь <span class="formula">S = a<sup>2</sup></span>.
-                  </p>
 
-                  <div class="card">
+                <h3 id="begin_2">Begin 2</h3>
+                <p>Дана сторона квадрата <span class="formula">a</span>. Найти его площадь <span class="formula">S =
+                        a<sup>2</sup></span>.
+                </p>
+
+                <div class="card ct-code-snippet-card">
                     <div class="card-header d-flex justify-content-between align-items-center">
-                      <div class="nav nav-pills ms-1" id="begin2-tablist" role="tablist">
-                        <button class="nav-link py-1 btn-sm " id="begin2_js-tab" data-bs-toggle="pill" data-bs-target="#begin2_js-content" type="button" role="tab" aria-controls="begin2_js-content" aria-selected="true">JS</button>
-                        <button class="nav-link py-1 btn-sm active " id="begin2_java-tab" data-bs-toggle="pill" data-bs-target="#begin2_java-content" type="button" role="tab" aria-controls="begin2_java-content" aria-selected="false">Java</button>
-                      </div>
-                      <button id="btn_snippet_begin2" class="btn btn-outline-primary btn-sm">Запустить</button>
+                        <div class="nav nav-pills ms-1" id="begin2-tablist" role="tablist">
+                            <button class="nav-link py-1 btn-sm " id="begin2_js-tab" data-bs-toggle="pill"
+                                data-bs-target="#begin2_js-content" type="button" role="tab" aria-controls="begin2_js-content"
+                                aria-selected="true">JS</button>
+                            <button class="nav-link py-1 btn-sm active " id="begin2_java-tab" data-bs-toggle="pill"
+                                data-bs-target="#begin2_java-content" type="button" role="tab" aria-controls="begin2_java-content"
+                                aria-selected="false">Java</button>
+                        </div>
+                        <button id="btn_snippet_begin2" class="btn btn-outline-primary btn-sm">Запустить</button>
                     </div>
-                    <div class="card-body tab-content p-0 user-select-none" >
-                      <div class="begin2_js-content tab-pane fade " id="begin2_js-content" role="tabpanel" aria-labelledby="begin2_js-tab">
-                        <pre class="m-1"><code>let a = Number(prompt("Введите сторону квадрата"));
+                    <div class="card-body tab-content p-0 user-select-none">
+                        <div class="begin2_js-content tab-pane fade " id="begin2_js-content" role="tabpanel"
+                            aria-labelledby="begin2_js-tab">
+                            <pre class="m-1"><code>let a = Number(prompt("Введите сторону квадрата"));
 let S = a * a;
 alert("Площадь квадрата: " + S); </code></pre>
-                      </div>
-                      <div class="begin2_java-content tab-pane fade show active" id="begin2_java-content" role="tabpanel" aria-labelledby="begin2_java-tab">
-                        <pre class="m-1"><code>import java.util.Scanner;
+                        </div>
+                        <div class="begin2_java-content tab-pane fade show active" id="begin2_java-content" role="tabpanel"
+                            aria-labelledby="begin2_java-tab">
+                            <pre class="m-1"><code>import java.util.Scanner;
 
 class JavaTasks_Begin2 {
     public static void main(String[] args) {
@@ -207,556 +227,65 @@ class JavaTasks_Begin2 {
         scanner.close();
     }
 }</code></pre>
-                      </div>
+                        </div>
                     </div>
-                    <script text="javascript">
-                      function snippet_begin2() {
-                        let a = Number(prompt("Введите сторону квадрата"));
-                        let S = a * a;
-                        alert("Площадь квадрата: " + S);
-                      }
+                    <script>
+                        function snippet_begin2() {
+                            let a = Number(prompt("Введите сторону квадрата"));
+                            let S = a * a;
+                            alert("Площадь квадрата: " + S);
+                        }
 
-                      let btn_snippet_begin2 = document.getElementById("btn_snippet_begin2");
-                      btn_snippet_begin2.addEventListener('click', () => snippet_begin2());
+                        let btn_snippet_begin2 = document.getElementById("btn_snippet_begin2");
+                        btn_snippet_begin2.addEventListener('click', () => snippet_begin2());
                     </script>
-                  </div>
-
                 </div>
-                <div id="begin3" class="mb-5">
-                  <h4 class="d-flex align-items-center">Begin 3 <small class="btn btn-outline-dark btn-sm disabled py-0 ms-3 ">Сложный</small></h4>
-                  <p>Даны стороны прямоугольника <span class="formula">a</span> и
-                    <span class="formula">b</span>.
-                    Найти его площадь <span class="formula">S = a⋅ b </span>
-                    и периметр <span class="formula">P = 2⋅ (a + b)</span>.
-                  </p>
-
-                  <div class="card">
-                    <div class="card-header d-flex justify-content-between align-items-center">
-                      <div class="nav nav-pills ms-1" id="begin3-tablist" role="tablist">
-                        <button class="nav-link py-1 btn-sm " id="begin3_js-tab" data-bs-toggle="pill" data-bs-target="#begin3_js-content" type="button" role="tab" aria-controls="begin3_js-content" aria-selected="true">JS</button>
-                        <button class="nav-link py-1 btn-sm active " id="begin3_java-tab" data-bs-toggle="pill" data-bs-target="#begin3_java-content" type="button" role="tab" aria-controls="begin3_java-content" aria-selected="false">Java</button>
-                      </div>
-                      <button id="btn_snippet_begin3" class="btn btn-outline-primary btn-sm">Запустить</button>
-                    </div>
-                    <div class="card-body tab-content p-0 user-select-none" >
-                      <div class="begin3_js-content tab-pane fade " id="begin3_js-content" role="tabpanel" aria-labelledby="begin3_js-tab">
-                        <pre class="m-1"><code>let a = Number(prompt("Введите сторону 'a' прямоугольника"));
-let b = Number(prompt("Введите сторону 'b' прямоугольника"));
-let S = a * b;
-let P = 2 * (a + b);
-alert("Площадь прямоугольника: " + S + "\n" +
-      "Периметр прямоугольника: " + P); </code></pre>
-                      </div>
-                      <div class="begin3_java-content tab-pane fade show active" id="begin3_java-content" role="tabpanel" aria-labelledby="begin3_java-tab">
-                        <pre class="m-1"><code>import java.util.Scanner;
-
-class JavaTasks_Begin3 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Введите сторону 'a' прямоугольника: ");
-        float a = scanner.nextFloat();
-
-        System.out.print("Введите сторону 'b' прямоугольника: ");
-        float b = scanner.nextFloat();
-
-        float S = a * b;
-        float P = 2 * (a + b);
-
-        System.out.println("Площадь прямоугольника: " + S);
-        System.out.println("Периметр прямоугольника: " + P);
-        scanner.close();
-    }
-}</code></pre>
-                      </div>
-                    </div>
-                    <script text="javascript">
-                      function snippet_begin3() {
-                        let a = Number(prompt("Введите сторону 'a' прямоугольника"));
-                        let b = Number(prompt("Введите сторону 'b' прямоугольника"));
-                        let S = a * b;
-                        let P = 2 * (a + b);
-                        alert("Площадь прямоугольника: " + S + "\n" +
-                              "Периметр прямоугольника: " + P);
-                      }
-
-                      let btn_snippet_begin3 = document.getElementById("btn_snippet_begin3");
-                      btn_snippet_begin3.addEventListener('click', () => snippet_begin3());
-                    </script>
-                  </div>
-                </div>
-                <div id="begin4" class="mb-5">
-                  <h4>Begin 4</h4>
-                  <p>Дан диаметр окружности <span class="formula">d</span>.
-                    Найти её длину <span class="formula">L = π⋅ d</span>.
-                    В качестве значения <span class="formula">π</span>
-                    использовать <span class="formula">3.14</span>.
-                  </p>
-
-                  <div class="card">
-                    <div class="card-header d-flex justify-content-between align-items-center">
-                      <div class="nav nav-pills ms-1" id="begin4-tablist" role="tablist">
-                        <button class="nav-link py-1 btn-sm " id="begin4_js-tab" data-bs-toggle="pill" data-bs-target="#begin4_js-content" type="button" role="tab" aria-controls="begin4_js-content" aria-selected="true">JS</button>
-                        <button class="nav-link py-1 btn-sm active " id="begin4_java-tab" data-bs-toggle="pill" data-bs-target="#begin4_java-content" type="button" role="tab" aria-controls="begin4_java-content" aria-selected="false">Java</button>
-                      </div>
-                      <button id="btn_snippet_begin4" class="btn btn-outline-primary btn-sm">Запустить</button>
-                    </div>
-                    <div class="card-body tab-content p-0 user-select-none" >
-                      <div class="begin4_js-content tab-pane fade " id="begin4_js-content" role="tabpanel" aria-labelledby="begin4_js-tab">
-                        <pre class="m-1"><code>let d = Number(prompt("Введите диаметр окружности"));
-let L = 3.14 * d;
-alert("Длина окружности: " + L); </code></pre>
-                      </div>
-                      <div class="begin4_java-content tab-pane fade show active" id="begin4_java-content" role="tabpanel" aria-labelledby="begin4_java-tab">
-                        <pre class="m-1"><code>import java.util.Scanner;
-
-class JavaTasks_Begin4 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Введите диаметр окружности: ");
-        float d = scanner.nextFloat();
-
-        float L = 3.14f * d;
-
-        System.out.println("Длина окружности: " + L);
-        scanner.close();
-    }
-}</code></pre>
-                      </div>
-                    </div>
-                    <script text="javascript">
-                      function snippet_begin4() {
-                        let d = Number(prompt("Введите диаметр окружности"));
-                        let L = 3.14 * d;
-                        alert("Длина окружности: " + L);
-                      }
-
-                      let btn_snippet_begin4 = document.getElementById("btn_snippet_begin4");
-                      btn_snippet_begin4.addEventListener('click', () => snippet_begin4());
-                    </script>
-                  </div>
-                </div>
-                <div id="begin5" class="mb-5">
-                  <h4>Begin 5</h4>
-                  <p>Дана длина ребра куба <span class="formula">a</span>.
-                    Найти объём куба <span class="formula">V = a<sup>3</sup></span>
-                    и площадь его поверхности <span class="formula">S = 6⋅ a<sup>2</sup></span>.
-                  </p>
-
-                  <div class="card">
-                    <div class="card-header d-flex justify-content-between align-items-center">
-                      <div class="nav nav-pills ms-1" id="begin5-tablist" role="tablist">
-                        <button class="nav-link py-1 btn-sm " id="begin5_js-tab" data-bs-toggle="pill" data-bs-target="#begin5_js-content" type="button" role="tab" aria-controls="begin5_js-content" aria-selected="true">JS</button>
-                        <button class="nav-link py-1 btn-sm active " id="begin5_java-tab" data-bs-toggle="pill" data-bs-target="#begin5_java-content" type="button" role="tab" aria-controls="begin5_java-content" aria-selected="false">Java</button>
-                      </div>
-                      <button id="btn_snippet_begin5" class="btn btn-outline-primary btn-sm">Запустить</button>
-                    </div>
-                    <div class="card-body tab-content p-0 user-select-none" >
-                      <div class="begin5_js-content tab-pane fade " id="begin5_js-content" role="tabpanel" aria-labelledby="begin5_js-tab">
-                        <pre class="m-1"><code>let a = Number(prompt("Введите длину ребра куба"));
-let V = Math.pow(a, 3);
-let S = 6 * Math.pow(a, 2);
-alert("Объём куба: " + V + "\n" +
-      "Площадь поверхности куба: " + S); </code></pre>
-                      </div>
-                      <div class="begin5_java-content tab-pane fade show active" id="begin5_java-content" role="tabpanel" aria-labelledby="begin5_java-tab">
-                        <pre class="m-1"><code>import java.util.Scanner;
-
-class JavaTasks_Begin5 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Введите длину ребра куба: ");
-        float a = scanner.nextFloat();
-
-        float V = (float) Math.pow(a, 3);
-        float S = 6 * (float) Math.pow(a, 2);
-
-        System.out.println("Объём куба: " + V);
-        System.out.println("Площадь поверхности куба: " + S);
-        scanner.close();
-    }
-}</code></pre>
-                      </div>
-                    </div>
-                    <script text="javascript">
-                      function snippet_begin5() {
-                        let a = Number(prompt("Введите длину ребра куба"));
-                        let V = Math.pow(a, 3);
-                        let S = 6 * Math.pow(a, 2);
-                        alert("Объём куба: " + V + "\n" +
-                          "Площадь поверхности куба: " + S);
-                      }
-
-                      let btn_snippet_begin5 = document.getElementById("btn_snippet_begin5");
-                      btn_snippet_begin5.addEventListener('click', () => snippet_begin5());
-                    </script>
-                  </div>
-                </div>
-                <div id="begin6" class="mb-5">
-                  <h4>Begin 6</h4>
-                  <p>Даны длины рёбер <span class="formula">a</span>,
-                    <span class="formula">b</span>, <span class="formula">c</span>
-                    прямоугольного параллелепипеда. Найти его объём <span class="formula">V = a⋅ b⋅ c</span>
-                    и площадь поверхности <span class="formula">S = 2⋅ (a⋅ b + b⋅ c + a⋅ c)</span>.
-                  </p>
-
-                  <div class="card">
-                    <div class="card-header d-flex justify-content-between align-items-center">
-                      <div class="nav nav-pills ms-1" id="begin6-tablist" role="tablist">
-                        <button class="nav-link py-1 btn-sm " id="begin6_js-tab" data-bs-toggle="pill" data-bs-target="#begin6_js-content" type="button" role="tab" aria-controls="begin6_js-content" aria-selected="true">JS</button>
-                        <button class="nav-link py-1 btn-sm active " id="begin6_java-tab" data-bs-toggle="pill" data-bs-target="#begin6_java-content" type="button" role="tab" aria-controls="begin6_java-content" aria-selected="false">Java</button>
-                      </div>
-                      <button id="btn_snippet_begin6" class="btn btn-outline-primary btn-sm">Запустить</button>
-                    </div>
-                    <div class="card-body tab-content p-0 user-select-none" >
-                      <div class="begin6_js-content tab-pane fade " id="begin6_js-content" role="tabpanel" aria-labelledby="begin6_js-tab">
-                        <pre class="m-1"><code>let a = Number(prompt("Введите длину ребра 'a' параллелепипеда"));
-let b = Number(prompt("Введите длину ребра 'b' параллелепипеда"));
-let c = Number(prompt("Введите длину ребра 'c' параллелепипеда"));
-let V = a * b * c;
-let S = 2 * (a * b + b * c + a * c);
-alert("Объём параллелепипеда: " + V + "\n" +
-      "Площадь поверхности параллелепипеда: " + S); </code></pre>
-                      </div>
-                      <div class="begin6_java-content tab-pane fade show active" id="begin6_java-content" role="tabpanel" aria-labelledby="begin6_java-tab">
-                        <pre class="m-1"><code>import java.util.Scanner;
-
-class JavaTasks_Begin6 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Введите длину ребра 'a' параллелепипеда: ");
-        float a = scanner.nextFloat();
-
-        System.out.print("Введите длину ребра 'b' параллелепипеда: ");
-        float b = scanner.nextFloat();
-
-        System.out.print("Введите длину ребра 'c' параллелепипеда: ");
-        float c = scanner.nextFloat();
-
-        float V = a * b * c;
-        float S = 2 * (a * b + b * c + a * c);
-
-        System.out.println("Объём параллелепипеда: " + V);
-        System.out.println("Площадь поверхности: " + S);
-        scanner.close();
-    }
-}</code></pre>
-                      </div>
-                    </div>
-                    <script text="javascript">
-                      function snippet_begin6() {
-                        let a = Number(prompt("Введите длину ребра 'a' параллелепипеда"));
-                        let b = Number(prompt("Введите длину ребра 'b' параллелепипеда"));
-                        let c = Number(prompt("Введите длину ребра 'c' параллелепипеда"));
-                        let V = a * b * c;
-                        let S = 2 * (a * b + b * c + a * c);
-                        alert("Объём параллелепипеда: " + V + "\n" +
-                          "Площадь поверхности параллелепипеда: " + S);
-                      }
-
-                      let btn_snippet_begin6 = document.getElementById("btn_snippet_begin6");
-                      btn_snippet_begin6.addEventListener('click', () => snippet_begin6());
-                    </script>
-                  </div>
-                </div>
-                <div id="begin7" class="mb-5">
-                  <h4 class="d-flex align-items-center">Begin 7 <small
-                      class="btn btn-outline-dark btn-sm disabled py-0 ms-3 ">Сложный</small></h4>
-                  <p>Найти длину окружности <span class="formula">L</span> и площадь круга <span class="formula">S</span>
-                    заданного радиуса <span class="formula">R</span>: <span class="formula">L = 2⋅ π⋅ R</span>,
-                    <span class="formula">S = π⋅ R<sup>2</sup></span>.
-                  </p>
-
-                  <div class="card">
-                    <div class="card-header d-flex justify-content-between align-items-center">
-                      <div class="nav nav-pills ms-1" id="begin7-tablist" role="tablist">
-                        <button class="nav-link py-1 btn-sm " id="begin7_js-tab" data-bs-toggle="pill" data-bs-target="#begin7_js-content" type="button" role="tab" aria-controls="begin7_js-content" aria-selected="true">JS</button>
-                        <button class="nav-link py-1 btn-sm active " id="begin7_java-tab" data-bs-toggle="pill" data-bs-target="#begin7_java-content" type="button" role="tab" aria-controls="begin7_java-content" aria-selected="false">Java</button>
-                      </div>
-                      <button id="btn_snippet_begin7" class="btn btn-outline-primary btn-sm">Запустить</button>
-                    </div>
-                    <div class="card-body tab-content p-0 user-select-none" >
-                      <div class="begin7_js-content tab-pane fade " id="begin7_js-content" role="tabpanel" aria-labelledby="begin7_js-tab">
-                        <pre class="m-1"><code>let R = Number(prompt("Введите радиус круга"));
-let L = 2 * 3.14 * R;
-let S = 3.14 * Math.pow(R, 2);
-alert("Длина окружности: " + L + "\n" +
-      "Площадь круга: " + S); </code></pre>
-                      </div>
-                      <div class="begin7_java-content tab-pane fade show active" id="begin7_java-content" role="tabpanel" aria-labelledby="begin7_java-tab">
-                        <pre class="m-1"><code>import java.util.Scanner;
-
-class JavaTasks_Begin7 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Введите радиус круга: ");
-        float R = scanner.nextFloat();
-
-        float L = 2 * 3.14f * R;
-        float S = 3.14f * (float) Math.pow(R, 2);
-
-        System.out.println("Длина окружности: " + L);
-        System.out.println("Площадь круга: " + S);
-        scanner.close();
-    }
-}</code></pre>
-                      </div>
-                    </div>
-                    <script text="javascript">
-                      function snippet_begin7() {
-                        let R = Number(prompt("Введите радиус круга"));
-                        let L = 2 * 3.14 * R;
-                        let S = 3.14 * Math.pow(R, 2);
-                        alert("Длина окружности: " + L + "\n" +
-                          "Площадь круга: " + S);
-                      }
-
-                      let btn_snippet_begin7 = document.getElementById("btn_snippet_begin7");
-                      btn_snippet_begin7.addEventListener('click', () => snippet_begin7());
-                    </script>
-                  </div>
-                </div>
-                <div id="begin8" class="mb-5">
-                  <h4>Begin 8</h4>
-                  <p>Даны два числа <span class="formula">a</span> и <span class="formula">b</span>.
-                    Найти их <span class="fst-italic">среднее арифметическое</span>:
-                    <span class="formula">(a + b) / 2</span>.
-                  </p>
-
-                  <div class="card">
-                    <div class="card-header d-flex justify-content-between align-items-center">
-                      <div class="nav nav-pills ms-1" id="begin8-tablist" role="tablist">
-                        <button class="nav-link py-1 btn-sm " id="begin8_js-tab" data-bs-toggle="pill" data-bs-target="#begin8_js-content" type="button" role="tab" aria-controls="begin8_js-content" aria-selected="true">JS</button>
-                        <button class="nav-link py-1 btn-sm active " id="begin8_java-tab" data-bs-toggle="pill" data-bs-target="#begin8_java-content" type="button" role="tab" aria-controls="begin8_java-content" aria-selected="false">Java</button>
-                      </div>
-                      <button id="btn_snippet_begin8" class="btn btn-outline-primary btn-sm">Запустить</button>
-                    </div>
-                    <div class="card-body tab-content p-0 user-select-none" >
-                      <div class="begin8_js-content tab-pane fade " id="begin8_js-content" role="tabpanel" aria-labelledby="begin8_js-tab">
-                        <pre class="m-1"><code>let a = Number(prompt("Введите число 'a'"));
-let b = Number(prompt("Введите число 'b'"));
-let M = (a + b) / 2;
-alert("Среднее арифметическое: " + M); </code></pre>
-                      </div>
-                      <div class="begin8_java-content tab-pane fade show active" id="begin8_java-content" role="tabpanel" aria-labelledby="begin8_java-tab">
-                        <pre class="m-1"><code>import java.util.Scanner;
-
-class JavaTasks_Begin8 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Введите число 'a': ");
-        float a = scanner.nextFloat();
-
-        System.out.print("Введите число 'b': ");
-        float b = scanner.nextFloat();
-
-        float M = (a + b) / 2;
-
-        System.out.println("Среднее арифметическое: " + M);
-        scanner.close();
-    }
-}</code></pre>
-                      </div>
-                    </div>
-                    <script text="javascript">
-                      function snippet_begin8() {
-                        let a = Number(prompt("Введите число 'a'"));
-                        let b = Number(prompt("Введите число 'b'"));
-                        let M = (a + b) / 2;
-                        alert("Среднее арифметическое: " + M);
-                      }
-
-                      let btn_snippet_begin8 = document.getElementById("btn_snippet_begin8");
-                      btn_snippet_begin8.addEventListener('click', () => snippet_begin8());
-                    </script>
-                  </div>
-                </div>
-                <div id="begin9" class="mb-5">
-                  <h4>Begin 9</h4>
-                  <p>Даны два неотрицательных числа <span class="formula">a</span> и <span class="formula">b</span>.
-                    Найти их <span class="fst-italic">среднее геометрическое</span>, то есть квадратный корень
-                    из их произведения: <span class="formula">√(a * b)</span>
-                  </p>
-
-                  <div class="card">
-                    <div class="card-header d-flex justify-content-between align-items-center">
-                      <div class="nav nav-pills ms-1" id="begin9-tablist" role="tablist">
-                        <button class="nav-link py-1 btn-sm " id="begin9_js-tab" data-bs-toggle="pill" data-bs-target="#begin9_js-content" type="button" role="tab" aria-controls="begin9_js-content" aria-selected="true">JS</button>
-                        <button class="nav-link py-1 btn-sm active " id="begin9_java-tab" data-bs-toggle="pill" data-bs-target="#begin9_java-content" type="button" role="tab" aria-controls="begin9_java-content" aria-selected="false">Java</button>
-                      </div>
-                      <button id="btn_snippet_begin9" class="btn btn-outline-primary btn-sm">Запустить</button>
-                    </div>
-                    <div class="card-body tab-content p-0 user-select-none" >
-                      <div class="begin9_js-content tab-pane fade " id="begin9_js-content" role="tabpanel" aria-labelledby="begin9_js-tab">
-                        <pre class="m-1"><code>let a = Number(prompt("Введите неотрицательное число 'a'"));
-let b = Number(prompt("Введите неотрицательное число 'b'"));
-let G = Math.sqrt(a * b);
-alert("Среднее геометрическое: " + G); </code></pre>
-                      </div>
-                      <div class="begin9_java-content tab-pane fade show active" id="begin9_java-content" role="tabpanel" aria-labelledby="begin9_java-tab">
-                        <pre class="m-1"><code>import java.util.Scanner;
-
-class JavaTasks_Begin9 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Введите неотрицательное число 'a': ");
-        float a = scanner.nextFloat();
-
-        System.out.print("Введите неотрицательное число 'b': ");
-        float b = scanner.nextFloat();
-
-        float G = (float) Math.sqrt(a * b);
-
-        System.out.println("Среднее геометрическое: " + G);
-        scanner.close();
-    }
-}</code></pre>
-                      </div>
-                    </div>
-                    <script text="javascript">
-                      function snippet_begin9() {
-                        let a = Number(prompt("Введите неотрицательное число 'a'"));
-                        let b = Number(prompt("Введите неотрицательное число 'b'"));
-                        let G = Math.sqrt(a * b);
-                        alert("Среднее геометрическое: " + G);
-                      }
-
-                      let btn_snippet_begin9 = document.getElementById("btn_snippet_begin9");
-                      btn_snippet_begin9.addEventListener('click', () => snippet_begin9());
-                    </script>
-                  </div>
-                </div>
-                <div id="begin10">
-                  <h4>Begin 10</h4>
-                  <p>Даны два ненулевых числа. Найти сумму, разность, произведение
-                    и частное их квадратов.
-                  </p>
-
-                  <div class="card">
-                    <div class="card-header d-flex justify-content-between align-items-center">
-                      <div class="nav nav-pills ms-1" id="begin10-tablist" role="tablist">
-                        <button class="nav-link py-1 btn-sm " id="begin10_js-tab" data-bs-toggle="pill" data-bs-target="#begin10_js-content" type="button" role="tab" aria-controls="begin10_js-content" aria-selected="true">JS</button>
-                        <button class="nav-link py-1 btn-sm active " id="begin10_java-tab" data-bs-toggle="pill" data-bs-target="#begin10_java-content" type="button" role="tab" aria-controls="begin10_java-content" aria-selected="false">Java</button>
-                      </div>
-                      <button id="btn_snippet_begin10" class="btn btn-outline-primary btn-sm">Запустить</button>
-                    </div>
-                    <div class="card-body tab-content p-0 user-select-none" >
-                      <div class="begin10_js-content tab-pane fade " id="begin10_js-content" role="tabpanel" aria-labelledby="begin10_js-tab">
-                        <pre class="m-1"><code>let a = Number(prompt("Введите первое ненулевое число"));
-let b = Number(prompt("Введите второе ненулевое число"));
-let Sum = (a * a) + (b * b);
-let Dif = (a * a) - (b * b);
-let Prd = (a * a) * (b * b);
-let Qnt = (a * a) / (b * b);
-alert("Сумма квадратов: " + Sum + "\n" +
-      "Разность квадратов: " + Dif + "\n" +
-      "Произведение квадратов: " + Prd + "\n" +
-      "Частное квадратов: " + Qnt); </code></pre>
-                      </div>
-                      <div class="begin10_java-content tab-pane fade show active" id="begin10_java-content" role="tabpanel" aria-labelledby="begin10_java-tab">
-                        <pre class="m-1"><code>import java.util.Scanner;
-
-class JavaTasks_Begin10 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Введите первое ненулевое число: ");
-        float a = scanner.nextFloat();
-
-        System.out.print("Введите второе ненулевое число: ");
-        float b = scanner.nextFloat();
-
-        float Sum = (a * a) + (b * b);
-        float Dif = (a * a) - (b * b);
-        float Prd = (a * a) * (b * b);
-        float Qnt = (a * a) / (b * b);
-
-        System.out.println("Сумма квадратов: " + Sum);
-        System.out.println("Разность квадратов: " + Dif);
-        System.out.println("Произведение квадратов: " + Prd);
-        System.out.println("Частное квадратов: " + Qnt);
-        scanner.close();
-    }
-}</code></pre>
-                      </div>
-                    </div>
-                    <script text="javascript">
-                      function snippet_begin10() {
-                        let a = Number(prompt("Введите первое ненулевое число"));
-                        let b = Number(prompt("Введите второе ненулевое число"));
-                        let Sum = (a * a) + (b * b);
-                        let Dif = (a * a) - (b * b);
-                        let Prd = (a * a) * (b * b);
-                        let Qnt = (a * a) / (b * b);
-                        alert("Сумма квадратов: " + Sum + "\n" +
-                          "Разность квадратов: " + Dif + "\n" +
-                          "Произведение квадратов: " + Prd + "\n" +
-                          "Частное квадратов: " + Qnt);
-                      }
-
-                      let btn_snippet_begin10 = document.getElementById("btn_snippet_begin10");
-                      btn_snippet_begin10.addEventListener('click', () => snippet_begin10());
-                    </script>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
-          <div class="tab-pane fade" id="list-integer" role="tabpanel" aria-labelledby="list-integer-list">
-            Integer
-          </div>
-          <div class="tab-pane fade" id="list-boolean" role="tabpanel" aria-labelledby="list-boolean-list">
-            Boolean
-          </div>
-          <div class="tab-pane fade" id="list-if" role="tabpanel" aria-labelledby="list-if-list">
-            Boolean
-          </div>
-        </div>
-      </main>
-      <div class="d-flex d-sm-none fixed-bottom justify-content-end pb-3">
-        <a href="#" class="btn bg-light border">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up"
-            viewBox="0 0 16 16">
-            <path fill-rule="evenodd"
-              d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
-          </svg>
-          Наверх
-        </a>
-      </div>
+        </main>
     </div>
-  </div>
-
-  <div class="container">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-5 border-top">
-      <p class="col-md-4 mb-0 px-1 text-muted">© 2021 Максим Песков</p>
-      <a class="col-md-4 navbar-brand m-0  p-0 px-1 text-dark text-center" href="#">
-        <span class="bg-primary text-light rounded px-1">Code</span>
-        Tasks
-      </a>
-      <a href="https://github.com/KostarSf/college_js_tasks" class="nav-link p-0 col-md-4 px-1 text-end text-dark">
-        Source
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github"
-          viewBox="0 0 16 16">
-          <path
-            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-        </svg>
-      </a>
+    <footer class="px-lg-2 px-xxl-0 ct-footer py-5 bg-light mt-5">
+        <div class="container-xxl">
+            <div class="row">
+                <div class="col-12 text-center mb-2">
+                    <p class="pt-4">
+                        <a href="/" class="navbar-brand ct-footer-brand ct-brand">
+                            <span class="bg-primary text-white px-2 rounded-3">Code</span> Tasks
+                        </a>
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <p class="small text-muted text-center text-sm-start px-4 px-md-0">
+                        Задачи взяты из книги <span class="text-dark"><span class="text-nowrap">М.Э. Абрамян</span> «1000 Задач по программированию»</span>
+                    </p>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <p class="small text-muted">© 2021 Максим Песков</p>
+                </div>
+                <div class="col-sm-4 text-center text-sm-end">
+                    <a href="https://github.com/KostarSf/college_js_tasks" class="ct-github-link">
+                        Source
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="d-inline-block align-text-top ms-1"
+                            viewBox="0 0 512 499.36" role="img">
+                            <title>GitHub</title>
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z">
+                            </path>
+                        </svg>
+                    </a>
+                    <p class="small text-muted">Currently v2.0.0</p>
+                </div>
+            </div>
+        </div>
     </footer>
-  </div>
 
-  <script src="js/bootstrap.bundle.js"></script>
-  <script src="js/highlight.js"></script>
-  <script src="js/javascript.min.js"></script>
-  <script src="js/java.min.js"></script>
-  <script>
-    hljs.highlightAll();
-  </script>
+    <div class="scripts">
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/highlight.min.js"></script>
+        <script src="js/highlight/javascript.min.js"></script>
+        <script src="js/highlight/java.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+        <script src="js/codetasks.js"></script>
+    </div>
 </body>
 
 </html>
