@@ -5,4 +5,4 @@ hljs.highlightAll();
 anchors.options = {
     icon: '#'
 }
-anchors.add('.ct-content > h3');
+anchors.add('.ct-content > h2, .ct-content > h3, .ct-content > h4');
