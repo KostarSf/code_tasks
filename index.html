@@ -130,7 +130,47 @@
             <div class="ct-toc mt-4 mb-5 my-md-0 ps-xl-3 text-muted pe-lg-2 pe-xxl-0">
                 <strong class="d-block h6 my-2 pb-2 border-bottom">Навигация</strong>
                 <nav id="tableOfContents">
-                    <ul class="d-flex flex-wrap  d-lg-block">
+                    <ul class="mb-0">
+                        <li><a href="#java_dev_software">ПО для разработки на Java</a>
+                            <ul>
+                                <li><a href="#jdk">Java Development Kit</a></li>
+                                <li><a href="#ide">Среда разработки</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#first_program">Первая программа</a></li>
+
+                        <li><a href="#general_concepts">Основные понятия</a>
+                            <ul>
+                                <li><a href="#program_basis">Основа программы</a>
+                                    <ul>
+                                        <li><a href="#main_method">Главный метод</a></li>
+                                        <li><a href="#main_class">Главный класс</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#variables">Переменные</a>
+                                    <ul>
+                                        <li><a href="#integers">Целые числа</a></li>
+                                        <li><a href="#real_numbers">Вещественные числа</a></li>
+                                        <li><a href="#numbers_operations">Операции над числами</a></li>
+                                        <li><a href="#strings">Строки</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#builtin_methods">Встроенные методы</a>
+                                    <ul>
+                                        <li><a href="#screen_output">Вывод на экран</a></li>
+                                        <li><a href="#math_functions">Математические функции</a></li>
+                                        <li><a href="#keyboard_input">Ввод с клавиатуры</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#type_conversion">Приведение типов</a></li>
+                                <li><a href="#packages_import">Импорт пакетов</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li><a href="#begin_tasks">Задачи раздела Begin</a>
+                            <ul class="d-flex flex-wrap  d-lg-block">
                                 <li><a href="#begin_1">Begin 1</a></li>
                                 <li><a href="#begin_2">Begin 2</a></li>
                                 <li><a href="#begin_3">Begin 3</a><span class="badge ct-badge-difficult ms-2">Сложный</span></li>
@@ -141,10 +181,161 @@
                                 <li><a href="#begin_8">Begin 8</a></li>
                                 <li><a href="#begin_9">Begin 9</a></li>
                                 <li><a href="#begin_10">Begin 10</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
             </div>
             <div class="ct-content ps-lg-4">
+                <!-- РАЗДЕЛ Все, что нужно для старта -->
+
+                <h2 id="java_dev_software">ПО для разработки на Java</h2>
+                <p>Для того, чтобы иметь возможность с комфортом разрабатывать Java программы, необходимо как минимум две вещи - комплект разработчика JDK и хороший редактор кода, как минимум, с подсветкой синтаксиса и автодополнением.</p>
+
+                <h3 id="jdk">Java Development Kit</h3>
+                <p>JDK - это набор программ, предназначенных для сборки и запуска программ на Java. В отличие от программ на C/C++, где компилятор сразу собирает бинарый exe файл из исходного кода, Java программы компилируются в промежуточный <em>байт-код</em> - файл с расширением <code>.class</code>. Сделано это для максимальной кроссплатформенности - разработчику не нужно каждый раз компилировать программу под каждую платформу. Полученный файл передается виртуальной Java машине, компилируется в нативный бинарый код системы и исполняется на лету.</p>
+                <p>Есть несколько реализаций JDK - проприетарная от Oracle и свободная от OpenJDK. Я рекомендую скачать версию <strong>OpenJDK 11</strong> от Microsoft, <a href="https://docs.microsoft.com/ru-ru/java/openjdk/download" target="_blank" rel="noopener">отсюда</a>. Найдите в списке вашу платформу (<em>Windows x64</em>) и скачайте <em>msi</em> файл. После чего установите программу и перезапустите компьютер.</p>
+                <p>Для проверки установки нажмите <kbd>Win + X</kbd>, выберите PowerShell и введите команду <code>java --version</code>. В качестве альтернативы вы можете запустить командную строку через меню Пуск и ввести в ней ту же команду. Программа выведет свою версию, к примеру <samp class="text-muted">openjdk 11.0.12 2021-07-20</samp>.</p>
+
+                <h3 id="ide">Среда разработки</h3>
+                <p>Интегрированная среда разработки - это, можно сказать, продвинутый редактор кода, который не только подсвечивает
+                синтаксис, но и имеет инструменты автодополнения кода и его рефакторинга, а также поможет скомпилировать или отладить
+                вашу программу. Рефакторинг позволяет быстро преобразовывать части программы, например, переименовывать переменные,
+                вставлять недостающие импорты внешних пакетов и вычленять новые методы из вашего кода. Отладка программы или дебаггинг -
+                это пошаговое выполнение вашей программы с возможностью отслеживания значений переменных - незаменимый инструмент при
+                поиске недочетов (багов) в вашей программе.</p>
+                <p>На текущий момент есть три среды разработки для Java, достойных упоминания - это <strong><a href="https://www.jetbrains.com/ru-ru/idea/download/#section=windows" target="_blank" rel="noopener">IntelliJ IDEA Community</a></strong>, <strong><a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Visual Studio Code</a></strong> и <strong><a href="https://www.eclipse.org/downloads/packages/" target="_blank" rel="noopener">Eclipse IDE</a></strong>. Скачать их вы можете по приведённым ссылкам. Можете выбирать любую, которая вам понравится. Я же использую VS Code, и даже этот текст пишу именно в ней.</p>
+
+                <h4>IntelliJ IDEA</h4>
+                <p>Если вы скачали IntelliJ IDEA, то для начала работы создайте проект, введите его название и выберите его новое местоположение на диске. Остальные настройки можете оставить по-умолчанию. После открытия проекта щелкните <kbd>ПКМ</kbd> по папке <code>src</code> в левой панели и выберите <em>New > Java Class</em>. В появившемся окошке введите <em>java_tasks.FirstProgram</em> (имя пакета и файла нашей программы) и нажмите <kbd>Enter</kbd>.</p>
+                <p>Теперь перед вами открыт ваш новый файл с некоторым кодом. Дополните его, как показано ниже.</p>
+                <div class="card ct-code-snippet-card mb-3">
+                  <div class="card-body tab-content p-0">
+                    <pre class="m-1"><code>package java_tasks;
+
+public class FirstProgram {
+    public static void main(String[] args) {
+        System.out.println("Hello, world!");
+    }
+} </code></pre>
+                  </div>
+                </div>
+                <p>Для возможности выполнения нашей программы необходимо добавить новую конфигурацию сборки. Вызовите обозреватель конфигураций, нажав на кнопку <a href="##" data-bs-container="body" data-bs-trigger="focus" data-bs-toggle="popover"
+                    data-bs-html="true" data-bs-content="<img src='img/idea_add_configuration.png'>"
+                    data-bs-custom-class="ct-popover-image">
+                    <em>Add Configuration...</em>
+                </a> в правом верхнем углу программы. Добавьте новую конфигурацию, нажав на плюсик, и выберите в выпадающем списке пункт <em>Application</em>. Укажите <a href="##" data-bs-toggle="tooltip" title="Поле Name">имя конфигурации</a>, например, <em>JavaProgram</em>, и <a href="##" data-bs-toggle="tooltip" title="Поле Main Class">главный класс</a>, нажав на иконку справа в поле для ввода. В списке будет единственнственный элемент - ваш файлик. Дважды нажмите <em>Ok</em> и мы готовы начать.</p>
+                <p>Запускать ваши программы вы сможете, нажав на зеленую стрелочку в интерфейсе программы, либо по комбинации клавиш <kbd>Shift + F10</kbd>.</p>
+
+                <h4>Visual Studio Code</h4>
+                <p>Если же вы выбрали VS Code, то создайте новую папку, в которй будет располагаться ваш проеки, и откройте её в программе (<em>Файл > Открыть папку...</em>). Альтернативный вариант - открыть нужную папку в проводнике, нажать <kbd>ПКМ</kbd> и выбрать <em>Открыть в Visual Studio Code</em>. После чего, создайте в редакторе новый файл <code>MyProgram.java</code>, нажав <kbd>ПКМ</kbd> в пустой области слева и выбрав пункт <em>Создать файл</em>. При первом открытии <code>.java</code> файла программа предложит скачать пакет расширений для работы с Java, согласитесь, нажав <em>Установить</em>.</p>
+                <p class="bg-warning">Исправить отсутствие инфы о создании пакета java_tasks</p>
+                <div class="card mb-3">
+                    <div class="card-body d-md-flex gap-3 align-items-baseline">
+                        <h5 class="card-title">Примечание</h5>
+                        <div>
+                            <p class="card-text">
+                                Вы можете установить русификатор для программы. Для этого перейдите в панель расширений и введите в поиске
+                                <em>Russian Language Pack for Visual Studio Code</em>, после чего установите предложенный пакет.
+                            </p>
+                            <p class="card-text">Панель расширений можно найти в списке значков в левой части программы.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h4>Eclipse IDE</h4>
+                <p>Инструкции пока что нет, но вы держитесь.</p>
+
+                <h2 id="first_program">Первая программа</h2>
+                <p>Введите в новоиспеченный <code>.java</code> файл следующие строки кода:</p>
+                <div class="card ct-code-snippet-card mb-3">
+                    <div class="card-body tab-content p-0">
+                        <pre class="m-1"><code>package java_tasks;
+
+public class FirstProgram {
+    public static void main(String[] args) {        <!-- -->
+        System.out.println("Hello, world!");
+    }
+}</code></pre>
+                    </div>
+                </div>
+
+                <p>Теперь вы можете запустить свою первую программу. Нажмите <kbd>Shift + F10</kbd>, если вы используете IntelliJ IDEA, либо <kbd>F5</kbd>, если у вас VS Code, и программа скомпилируется и запустится. Поздравляю! Вы написали свою первую программу на Java. Дальнейшие подробности и пояснения описаны в следующем разделе.</p>
+                <p><a href="begin" class="btn btn-outline-secondary"><strong>Begin</strong> - Основные понятия</a></p>
+
+                <!-- / РАЗДЕЛ Все, что нужно для старта -->
+
+                <!-- РАЗДЕЛ Begin -->
+
+                <h2 id="general_concepts">Основные понятия</h2>
+                <p>Разберём принципы написания программ на Java, необходимые для решения задач раздела Begin.</p>
+                <p>Если вы ещё не установили среду разработки и комплект JDK, то вся необходимая информация ждет вас в разделе <a href="/get_started">Все, что нужно для старта</a>.</p>
+
+                <h3 id="program_basis">Основа программы</h3>
+                <p>Каждая Java программа начинается одинаково:</p>
+                <div class="card ct-code-snippet-card mb-3">
+                  <div class="card-body tab-content p-0">
+                    <pre class="m-1"><code>package java_tasks;
+
+public class FirstProgram {
+    public static void main(String[] args) {        <!-- -->
+
+    }
+}</code></pre>
+                  </div>
+                </div>
+                <p>Мы объявляем публичный статический метод <code>main</code> внутри публичного класса с именем нашего файла, в данном случае <code>MyProgram</code>. Все дальнейшие инструкции пишутся внутри этого метода. Кроме того, мы указываем пакет нашей программы <code>java_tasks</code>, имя которого соответствует имени директории с нашим файлом.</p>
+                <div class="card mb-3">
+                    <div class="card-body d-md-flex gap-3 align-items-baseline">
+                        <h5 class="card-title">Важно!</h5>
+                        <div>
+                            <p class="card-text">В одном <code>.java</code> файле должен располагаться лишь один публичный класс с таким
+                                же как у
+                                файла именем и располагаться на самом верху. Остальные классы в файле, при их наличии, должны быть
+                                приватными.</p>
+                            <a class="card-link"
+                                href="https://www.magnumblog.space/java/131-translating-java-code-conventions#java_source_files"
+                                target="_blank" rel="noopener">3.1 Файлы с исходным кодом Java</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <h4 id="main_method">Главный метод</h3>
+                <p>Наш метод <code>main</code> является главным - именно с инструкций, расположенных в нем, наша программа начинает работу. Из этого следует, что он должен быть в программе обязательно. Рассмотрим его модификаторы.</p>
+                <p><code>public</code> - означает, что метод публичный, то есть его <a href="##" data-bs-toggle="tooltip" title="Область программы, в которой можно обратиться к классу или вызвать метод">область видимости</a> распространяется на всю программу. Кроме <code>public</code> также есть  модификаторы доступа <code>protected</code> и <code>private</code>, однако на текущий момент они нам не понадобятся.</p>
+
+                <p><code>static</code> - означает, что метод статический. Обычные методы располагаются внутри объектов, позволяя изменять их состояние, и для их вызова необходимо этот самый объект создать. Чтобы метод был доступен без создания объекта, то есть, принадлежал к классу, к нему добавляют данный модификатор. Создание объектов нам пока не понадобится.</p>
+
+                <p><code>void</code> - добавляется к методу, если он не возвращает никакого значения. В ином случае вместо <code>void</code> указывается возвращаемый тип, например, <code>float</code> или <code>String</code>, а в самом теле метода, обычно, в его конце, размещается оператор <code>return</code>. Возвращение значения нам пока не понадобится.</p>
+
+                <p><code>String[] <var>args</var></code> - параметр метода <code>main</code>. Состоит из названия типа (<code>String[]</code> - массив строк) и имени аргумента (<code><var>args</var></code>). Любой метод при необходимости может принимать в себя любое количество параметров, разделенных запятыми, однако на практике рекомендуется использовать не больше двух или трёх. </p>
+                <p>Параметры метода необходимы для того, чтобы вызывающая сторона (в данном случае система) могла передать в метод
+                какие-либо данные. Например, в случае метода <code>main</code>, в параметр <code><var>args</var></code> из системы передается список аргументов командной строки, с которыми программа была запущена.</p>
+                <p>Абзац с примером применения аргументов, компилируя и вызываю программу из терминала</p>
+
+                <p><code>main(..) { .. }</code> - тело метода</p>
+
+                <h4 id="main_class">Главный класс</h3>
+                <h4 id="main_class">Главный.. пакет?</h3>
+
+                <h3 id="variables">Переменные</h3>
+                <h4 id="integers">Целые числа</h4>
+                <h4 id="real_numbers">Вещественные числа</h4>
+                <h4 id="numbers_operations">Операции над числами</h4>
+                <h4 id="strings">Строки</h4>
+
+                <h3 id="builtin_methods">Встроенные методы</h3>
+                <h4 id="screen_output">Вывод на экран</h4>
+                <h4 id="math_functions">Математические функции</h4>
+                <h4 id="keyboard_input">Ввод с клавиатуры</h4>
+
+                <h3 id="type_conversion">Приведение типов</h3>
+
+                <h3 id="packages_import">Импорт пакетов</h3>
+
+                <h2 id="begin_tasks">Задачи раздела Begin</h2>
+
                 <h3 id="begin_1">Begin 1</h3>
                 <p>Дана сторона квадрата <span class="formula">a</span>. Найти его периметр <span class="formula">P = 4⋅ a</span>.
                 </p>
@@ -170,7 +361,9 @@ alert("Периметр квадрата: " + P);</code></pre>
                         </div>
                         <div class="begin1_java-content tab-pane fade show active" id="begin1_java-content" role="tabpanel"
                             aria-labelledby="begin1_java-tab">
-                            <pre class="m-1"><code>import java.util.Scanner;
+                            <pre class="m-1"><code>package java_tasks;
+
+import java.util.Scanner;
 
 class JavaTasks_Begin1 {
     public static void main(String[] args) {
@@ -225,7 +418,9 @@ alert("Площадь квадрата: " + S); </code></pre>
                         </div>
                         <div class="begin2_java-content tab-pane fade show active" id="begin2_java-content" role="tabpanel"
                             aria-labelledby="begin2_java-tab">
-                            <pre class="m-1"><code>import java.util.Scanner;
+                            <pre class="m-1"><code>package java_tasks;
+
+import java.util.Scanner;
 
 class JavaTasks_Begin2 {
     public static void main(String[] args) {
