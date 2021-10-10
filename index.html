@@ -18,22 +18,22 @@
 
 <body>
     <header class="navbar navbar-expand-md navbar-light bg-light ct-navbar py-lg-3 px-lg-2">
-        <nav class="container-xxl" aria-label="Основная навигация">
+        <nav class="container-xxl align-items-baseline" aria-label="Основная навигация">
             <a href="/" class="navbar-brand ct-brand">
                 <span class="bg-primary text-white px-2 rounded-3">Code</span> Tasks
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#ctNavbar" aria-controls="ctNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ctNavbar" aria-controls="ctNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="ctNavbar">
-                <span class="navbar-text">
+                <span class="navbar-text pe-2">
                     Решение задач по программированию
                     <span class="text-nowrap">от Максима Пескова</span>
                 </span>
                 <hr class="d-md-none ct-hr">
-                <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+                <ul class="navbar-nav flex-row flex-wrap ms-md-auto justify-content-end">
                     <li class="nav-item col-6 col-md-auto">
-                        <a class="nav-link p-2" href="https://github.com/KostarSf/" target="_blank" rel="noopener">
+                        <a class="nav-link p-2 d-inline-flex align-items-center" href="https://github.com/KostarSf/" target="_blank" rel="noopener">
                             <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="navbar-nav-svg d-inline-block align-text-top" viewBox="0 0 512 499.36" role="img">
                                 <title>GitHub</title>
                                 <path fill="currentColor" fill-rule="evenodd"
@@ -44,7 +44,7 @@
                         </a>
                     </li>
                     <li class="nav-item col-6 col-md-auto">
-                        <a class="nav-link p-2" href="https://vk.com/shainert" target="_blank" rel="noopener">
+                        <a class="nav-link p-2 d-inline-flex align-items-center" href="https://vk.com/shainert" target="_blank" rel="noopener">
                             <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="navbar-nav-svg d-inline-block align-text-top" viewBox="2 2 21 21" role="img">
                                 <title>VK</title>
                                 <path fill="currentColor" fill-rule="evenodd"
@@ -55,6 +55,7 @@
                         </a>
                     </li>
                 </ul>
+                <a href="" class="btn btn-ct-donate d-lg-inline-block my-2 my-md-0 ms-md-3">Поддержать</a>
             </div>
         </nav>
     </header>
@@ -63,7 +64,7 @@
             <button
                 class="btn bg-light btn-outline-secondary ct-sidebar-toggle ct-navbar-sticky-button d-md-none py-0 px-1 ms-auto order-3 collapsed"
                 type="button" data-bs-toggle="collapse" data-bs-target="#ct-sections-nav" aria-controls="ct-sections-nav"
-                aria-expanded="false" aria-label="Переключить навигацию по секциям">
+                aria-expanded="false" aria-label="Переключить навигацию по разделам">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-expand" fill="currentColor"
                     viewBox="0 0 16 16">
                     <title>Expand</title>
@@ -79,11 +80,22 @@
                         d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zm7-8a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 4.293V.5A.5.5 0 0 1 8 0zm-.5 11.707l-1.146 1.147a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 11.707V15.5a.5.5 0 0 1-1 0v-3.793z">
                     </path>
                 </svg>
-                Меню секций
+                Меню разделов
             </button>
-            <nav class="collapse ct-links " id="ct-sections-nav" aria-label="Навигация по секциям">
+            <nav class="collapse ct-links " id="ct-sections-nav" aria-label="Навигация по разделам">
                 <hr class="d-md-none m-0 mx-2">
                 <ul class="list-unstyled mb-0 py-3 pt-md-1">
+                    <li class="mb-1">
+                        <button class="btn d-inline-flex align-items-center rounded collapsed disabled" data-bs-toggle="collapse"
+                            data-bs-target="#java-start-collapse" aria-expanded="true">
+                            Основы Java
+                        </button>
+                        <div class="collapse show" id="java-start-collapse">
+                            <ul class="list-unstyled fw-normal pb-1 small">
+                                <li><a href="#" class="d-inline-flex align-items-center rounded">Все, что нужно для старта</a></li>
+                            </ul>
+                        </div>
+                    </li>
                     <li class="mb-1">
                         <button class="btn d-inline-flex align-items-center rounded collapsed disabled" data-bs-toggle="collapse"
                             data-bs-target="#tasks-collapse" aria-expanded="true">
@@ -92,8 +104,8 @@
                         <div class="collapse show" id="tasks-collapse">
                             <ul class="list-unstyled fw-normal pb-1 small">
                                 <li><a href="#" class="d-inline-flex align-items-center rounded active">Begin <span class="badge ct-badge ms-2">10</span></a></li>
-                                <li><a href="#" class="d-inline-flex align-items-center rounded">Integer<span class="badge ct-badge ms-2">0</span></a></li>
-                                <li><a href="#" class="d-inline-flex align-items-center rounded">Boolean<span class="badge ct-badge ms-2">0</span></a></li>
+                                <li><a class="d-inline-flex align-items-center rounded user-select-none" >Integer<span class="badge ct-badge ms-2">скоро</span></a></li>
+                                <li><a class="d-inline-flex align-items-center rounded user-select-none">Boolean<span class="badge ct-badge ms-2">скоро</span></a></li>
                             </ul>
                         </div>
                     </li>
@@ -106,7 +118,8 @@
                     <img src="img/tasks_begin_head.jpg" alt="head_image_begin" class="card-img">
                     <div class="card-img-overlay d-flex flex-column">
                         <h2 class="card-title display-2 mt-auto">
-                            Programming <br> Begin Tasks
+                            Задачи <br>
+                            Раздел Begin
                         </h2>
                     </div>
                 </div>
@@ -114,20 +127,20 @@
                 <p class="lead">Все входные и выходные данные в заданиях этой группы являются вещественными числами.
                 </p>
             </div>
-            <div class="ct-toc mt-4 mb-5 my-md-0 ps-xl-3 mb-lg-5 text-muted pe-lg-2 pe-xxl-0">
+            <div class="ct-toc mt-4 mb-5 my-md-0 ps-xl-3 text-muted pe-lg-2 pe-xxl-0">
                 <strong class="d-block h6 my-2 pb-2 border-bottom">Навигация</strong>
                 <nav id="tableOfContents">
                     <ul class="d-flex flex-wrap  d-lg-block">
-                        <li ><a href="#begin_1">Begin 1</a></li>
-                        <li ><a href="#begin_2">Begin 2</a></li>
-                        <li ><a href="#begin_3">Begin 3</a><span class="badge ct-badge-difficult ms-2">Сложный</span></li>
-                        <li ><a href="#begin_4">Begin 4</a></li>
-                        <li ><a href="#begin_5">Begin 5</a></li>
-                        <li ><a href="#begin_6">Begin 6</a></li>
-                        <li ><a href="#begin_7">Begin 7</a><span class="badge ct-badge-difficult ms-2">Сложный</span></li>
-                        <li ><a href="#begin_8">Begin 8</a></li>
-                        <li ><a href="#begin_9">Begin 9</a></li>
-                        <li ><a href="#begin_10">Begin 10</a></li>
+                                <li><a href="#begin_1">Begin 1</a></li>
+                                <li><a href="#begin_2">Begin 2</a></li>
+                                <li><a href="#begin_3">Begin 3</a><span class="badge ct-badge-difficult ms-2">Сложный</span></li>
+                                <li><a href="#begin_4">Begin 4</a></li>
+                                <li><a href="#begin_5">Begin 5</a></li>
+                                <li><a href="#begin_6">Begin 6</a></li>
+                                <li><a href="#begin_7">Begin 7</a><span class="badge ct-badge-difficult ms-2">Сложный</span></li>
+                                <li><a href="#begin_8">Begin 8</a></li>
+                                <li><a href="#begin_9">Begin 9</a></li>
+                                <li><a href="#begin_10">Begin 10</a></li>
                     </ul>
                 </nav>
             </div>
@@ -240,6 +253,8 @@ class JavaTasks_Begin2 {
                         btn_snippet_begin2.addEventListener('click', () => snippet_begin2());
                     </script>
                 </div>
+
+                <p class="text-muted fs-5 pt-3 px-2 text-center">Больше задач в скором времени...</p>
             </div>
         </main>
     </div>
