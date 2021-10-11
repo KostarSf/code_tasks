@@ -271,6 +271,18 @@
     grid-area: intro;
 }
 
+.ct-date {
+    color: #c8cccf;
+}
+
+.figure img {
+    max-width: 100%;
+}
+
+kbd {
+    white-space: nowrap;
+}
+
 .ct-toc {
     grid-area: toc;
 }
