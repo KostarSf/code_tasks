@@ -1,12 +1,439 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <meta name="theme-color" content="#F8F9FA" />
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/highlight/github.min.css">
+    <link rel="stylesheet" href="css/codetasks.css">
+
+    <title>Все, что нужно для старта - Code Tasks</title>
 </head>
+
 <body>
-    get started
+    <header class="navbar navbar-expand-md navbar-light bg-light ct-navbar py-lg-3 px-lg-2">
+        <nav class="container-xxl align-items-baseline" aria-label="Основная навигация">
+            <a href="/" class="navbar-brand ct-brand">
+                <span class="bg-primary text-white px-2 rounded-3">Code</span> Tasks
+            </a>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ctNavbar"
+                aria-controls="ctNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="ctNavbar">
+                <span class="navbar-text pe-2">
+                    Решение задач по программированию
+                    <span class="text-nowrap">от Максима Пескова</span>
+                </span>
+                <hr class="d-md-none ct-hr">
+                <ul class="navbar-nav flex-row flex-wrap ms-md-auto justify-content-end">
+                    <li class="nav-item col-6 col-md-auto">
+                        <a class="nav-link p-2 d-inline-flex align-items-center" href="https://github.com/KostarSf/"
+                            target="_blank" rel="noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                class="navbar-nav-svg d-inline-block align-text-top" viewBox="0 0 512 499.36"
+                                role="img">
+                                <title>GitHub</title>
+                                <path fill="currentColor" fill-rule="evenodd"
+                                    d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z">
+                                </path>
+                            </svg>
+                            <small class="d-md-none ms-2">GitHub</small>
+                        </a>
+                    </li>
+                    <li class="nav-item col-6 col-md-auto">
+                        <a class="nav-link p-2 d-inline-flex align-items-center" href="https://vk.com/shainert"
+                            target="_blank" rel="noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                class="navbar-nav-svg d-inline-block align-text-top" viewBox="2 2 21 21" role="img">
+                                <title>VK</title>
+                                <path fill="currentColor" fill-rule="evenodd"
+                                    d="M15.07294,2H8.9375C3.33331,2,2,3.33331,2,8.92706V15.0625C2,20.66663,3.32294,22,8.92706,22H15.0625C20.66669,22,22,20.67706,22,15.07288V8.9375C22,3.33331,20.67706,2,15.07294,2Zm3.07287,14.27081H16.6875c-.55206,0-.71875-.44793-1.70831-1.4375-.86463-.83331-1.22919-.9375-1.44794-.9375-.30206,0-.38544.08332-.38544.5v1.3125c0,.35419-.11456.5625-1.04162.5625a5.69214,5.69214,0,0,1-4.44794-2.66668A11.62611,11.62611,0,0,1,5.35419,8.77081c0-.21875.08331-.41668.5-.41668H7.3125c.375,0,.51044.16668.65625.55212.70831,2.08331,1.91669,3.89581,2.40625,3.89581.1875,0,.27081-.08331.27081-.55206V10.10413c-.0625-.97913-.58331-1.0625-.58331-1.41663a.36008.36008,0,0,1,.375-.33337h2.29169c.3125,0,.41662.15625.41662.53125v2.89587c0,.3125.13544.41663.22919.41663.1875,0,.33331-.10413.67706-.44788a11.99877,11.99877,0,0,0,1.79169-2.97919.62818.62818,0,0,1,.63544-.41668H17.9375c.4375,0,.53125.21875.4375.53125A18.20507,18.20507,0,0,1,16.41669,12.25c-.15625.23956-.21875.36456,0,.64581.14581.21875.65625.64582,1,1.05207a6.48553,6.48553,0,0,1,1.22912,1.70837C18.77081,16.0625,18.5625,16.27081,18.14581,16.27081Z">
+                                </path>
+                            </svg>
+                            <small class="d-md-none ms-2">VK</small>
+                        </a>
+                    </li>
+                </ul>
+                <a href="donation.html" class="btn btn-ct-donate d-lg-inline-block my-2 my-md-0 ms-md-3">Поддержать</a>
+            </div>
+        </nav>
+    </header>
+    <div class="container-xxl my-md-4 ct-layout">
+        <aside class="ct-sidebar ps-lg-2 ps-xxl-0">
+            <button
+                class="btn bg-light btn-outline-secondary ct-sidebar-toggle ct-navbar-sticky-button d-md-none py-0 px-1 ms-auto order-3 collapsed"
+                type="button" data-bs-toggle="collapse" data-bs-target="#ct-sections-nav"
+                aria-controls="ct-sections-nav" aria-expanded="false" aria-label="Переключить навигацию по разделам">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-expand" fill="currentColor"
+                    viewBox="0 0 16 16">
+                    <title>Expand</title>
+                    <path fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10z">
+                    </path>
+                </svg>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-collapse"
+                    fill="currentColor" viewBox="0 0 16 16">
+                    <title>Collapse</title>
+                    <path fill-rule="evenodd"
+                        d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zm7-8a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 4.293V.5A.5.5 0 0 1 8 0zm-.5 11.707l-1.146 1.147a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 11.707V15.5a.5.5 0 0 1-1 0v-3.793z">
+                    </path>
+                </svg>
+                Меню разделов
+            </button>
+            <nav class="collapse ct-links " id="ct-sections-nav" aria-label="Навигация по разделам">
+                <hr class="d-md-none m-0 mx-2">
+                <ul class="list-unstyled mb-0 py-3 pt-md-1">
+                    <li class="mb-1">
+                        <button class="btn d-inline-flex align-items-center rounded collapsed disabled"
+                            data-bs-toggle="collapse" data-bs-target="#java-start-collapse" aria-expanded="true">
+                            Основы Java
+                        </button>
+                        <div class="collapse show" id="java-start-collapse">
+                            <ul class="list-unstyled fw-normal pb-1 small">
+                                <li><a href="get_started.html" class="d-inline-flex align-items-center rounded active">Все, что
+                                        нужно для старта</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mb-1">
+                        <button class="btn d-inline-flex align-items-center rounded collapsed disabled"
+                            data-bs-toggle="collapse" data-bs-target="#tasks-collapse" aria-expanded="true">
+                            Задачи
+                        </button>
+                        <div class="collapse show" id="tasks-collapse">
+                            <ul class="list-unstyled fw-normal pb-1 small">
+                                <li><a href="begin.html" class="d-inline-flex align-items-center rounded">Begin
+                                        <span class="badge ct-badge ms-2">10</span></a></li>
+                                <li><a class="d-inline-flex align-items-center rounded user-select-none">Integer<span
+                                            class="badge ct-badge ms-2">скоро</span></a></li>
+                                <li><a class="d-inline-flex align-items-center rounded user-select-none">Boolean<span
+                                            class="badge ct-badge ms-2">скоро</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="ct-main order-1">
+            <div class="ct-intro ps-lg-4 mt-3">
+                <div class="card text-white ct-head-image">
+                    <img src="img/get_started_head.jpg" alt="head_image_begin" class="card-img">
+                    <div class="card-img-overlay d-flex flex-column">
+                        <h2 class="card-title display-2 mt-auto">
+                            Все, что нужно <br>
+                            для старта в Java
+                        </h2>
+                    </div>
+                </div>
+                <p class="lead mt-3">Разберёмся в деталях, что потребуется для того, чтобы начать программировать на Java.</p>
+                <p class="lead">К концу этого раздела у вас будут установлены инструменты разработчика JDK и интегрированная среда разработки, а также вы напишете свою первую программу!
+                </p>
+                <p class="small ct-date">11 октября 2021</p>
+            </div>
+            <div class="ct-toc mt-4 mb-5 my-md-0 ps-xl-3 text-muted pe-lg-2 pe-xxl-0">
+                <strong class="d-block h6 my-2 pb-2 border-bottom">Навигация</strong>
+                <nav id="tableOfContents">
+                    <ul class="mb-0">
+                        <li><a href="#java_dev_software">ПО для разработки на Java</a>
+                            <ul>
+                                <li><a href="#jdk">Java Development Kit</a></li>
+                                <li><a href="#ide">Среда разработки</a>
+                                    <ul>
+                                        <li><a href="#intellij_idea">IntelliJ IDEA</a></li>
+                                        <li><a href="#visual_studio_code">Visual Studio Code</a></li>
+                                        <li><a href="#eclipse_ide">Eclipse IDE</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#first_program">Первая программа</a>
+                            <ul>
+                                <li><a href="#main_method">Главный метод</a></li>
+                                <li><a href="#main_class">Главный класс</a></li>
+                                <li><a href="#main_package">Главный пакет</a></li>
+                                <li><a href="#file_structure">Файловая структура программы</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="ct-content ps-lg-4">
+                <!-- РАЗДЕЛ Все, что нужно для старта -->
+
+                <h2 id="java_dev_software">ПО для разработки на Java</h2>
+                <p>Для того, чтобы иметь возможность с комфортом разрабатывать Java программы, необходимо как минимум
+                    две вещи - комплект разработчика JDK и хороший редактор кода, как минимум, с подсветкой синтаксиса и
+                    автодополнением.</p>
+
+                <h3 id="jdk">Java Development Kit</h3>
+                <p>JDK - это набор программ, предназначенных для сборки и запуска программ на Java. В отличие от
+                    программ на C/C++, где компилятор сразу собирает бинарый exe файл из исходного кода, Java программы
+                    компилируются в промежуточный <em>байт-код</em> - файл с расширением <code>.class</code>. Сделано
+                    это для максимальной кроссплатформенности - разработчику не нужно каждый раз компилировать программу
+                    под каждую платформу. Полученный файл передается виртуальной Java машине, компилируется в нативный
+                    бинарый код системы и исполняется на лету.</p>
+                <p>Есть несколько реализаций JDK - проприетарная от Oracle и свободная от OpenJDK. Я рекомендую скачать
+                    версию <strong>OpenJDK 11</strong> от Microsoft, <a
+                        href="https://docs.microsoft.com/ru-ru/java/openjdk/download" target="_blank"
+                        rel="noopener">отсюда</a>. Найдите в списке вашу платформу (<em>Windows x64</em>) и скачайте
+                    <em>msi</em> файл. Установите программу и перезапустите компьютер.</p>
+                <figure class="figure">
+                    <img src="img/jdk_java_home.png">
+                    <figcaption class="figure-caption">На экране выбора компонентов не забудьте отметить для установки
+                        переменную окружения JAVA_HOME.</figcaption>
+                </figure>
+                <p>Для проверки установки нажмите <kbd>Win + X</kbd>, выберите PowerShell и введите команду
+                    <code>java --version</code>. В качестве альтернативы вы можете запустить командную строку через меню
+                    Пуск и ввести в ней ту же команду. Программа выведет свою версию, к примеру <samp
+                        class="text-muted">openjdk 11.0.12 2021-07-20</samp>.</p>
+
+                <h3 id="ide">Среда разработки</h3>
+                <p>Интегрированная среда разработки - это, можно сказать, продвинутый редактор кода, который не только
+                    подсвечивает
+                    синтаксис, но и имеет инструменты автодополнения кода и его рефакторинга, а также поможет
+                    скомпилировать или отладить
+                    вашу программу. Рефакторинг позволяет быстро преобразовывать части программы, например,
+                    переименовывать переменные,
+                    вставлять недостающие импорты внешних пакетов и вычленять новые методы из вашего кода. Отладка
+                    программы или дебаггинг -
+                    это пошаговое выполнение вашей программы с возможностью отслеживания значений переменных -
+                    незаменимый инструмент при
+                    поиске недочетов (багов) в вашей программе.</p>
+                <p>На текущий момент есть три среды разработки для Java, достойных упоминания - это <strong><a
+                            href="https://www.jetbrains.com/ru-ru/idea/download/#section=windows" target="_blank"
+                            rel="noopener">IntelliJ IDEA Community</a></strong>, <strong><a
+                            href="https://code.visualstudio.com/" target="_blank" rel="noopener">Visual Studio
+                            Code</a></strong> и <strong><a href="https://www.eclipse.org/downloads/packages/"
+                            target="_blank" rel="noopener">Eclipse IDE</a></strong>. Скачать их вы можете по приведённым
+                    ссылкам. Можете выбирать любую, которая вам понравится. Я же использую VS Code, и даже этот текст
+                    пишу именно в ней.</p>
+
+                <h4 id="intellij_idea">IntelliJ IDEA</h4>
+                <p>Если вы скачали IntelliJ IDEA, то для начала работы создайте проект, введите его название и выберите
+                    его новое местоположение на диске. Остальные настройки можете оставить по-умолчанию. После открытия
+                    проекта щелкните <kbd>ПКМ</kbd> по папке <code>src</code> в левой панели и выберите <em>New > Java
+                        Class</em>. В появившемся окошке введите <em>java_tasks.FirstProgram</em> (имя пакета и файла
+                    нашей программы) и нажмите <kbd>Enter</kbd>. Такая файловая структура Java программ общепринята и о
+                    ней будет подробно рассказано в подглаве <a href="#file_structure">Файловая структура программы</a>.
+                </p>
+                <p>Теперь перед вами открыт ваш новый файл с некоторым кодом. Дополните его, как показано ниже, добавив
+                    метод <code>main</code>.</p>
+                <div class="card ct-code-snippet-card mb-3">
+                    <div class="card-body tab-content p-0">
+                        <pre class="m-1"><code>package java_tasks;
+
+public class FirstProgram {
+    public static void main(String[] args) {
+
+    }
+} </code></pre>
+                    </div>
+                </div>
+                <p>Для возможности выполнения нашей программы необходимо добавить новую конфигурацию сборки. Вызовите
+                    обозреватель конфигураций, нажав на кнопку <a href="##" data-bs-container="body"
+                        data-bs-trigger="focus" data-bs-toggle="popover" data-bs-html="true"
+                        data-bs-content="<img src='img/idea_add_configuration.png'>"
+                        data-bs-custom-class="ct-popover-image">
+                        <em>Add Configuration...</em>
+                    </a> в правом верхнем углу программы. Добавьте новую конфигурацию, нажав на плюсик, и выберите в
+                    выпадающем списке пункт <em>Application</em>. Укажите <a href="##" data-bs-toggle="tooltip"
+                        title="Поле Name">имя конфигурации</a>, например, <em>JavaProgram</em>, и <a href="##"
+                        data-bs-toggle="tooltip" title="Поле Main Class">главный класс</a>, нажав на иконку справа в
+                    поле для ввода. В списке будет единственнственный элемент - ваш файлик. Дважды нажмите <em>Ok</em> и
+                    мы готовы начать.</p>
+                <!-- <p>Запускать ваши программы вы сможете, нажав на зеленую стрелочку в интерфейсе программы, либо по комбинации клавиш <kbd>Shift + F10</kbd>.</p> -->
+
+                <h4 id="visual_studio_code">Visual Studio Code</h4>
+                <p>Если же вы выбрали VS Code, то создайте новую папку, в которй будет располагаться ваш проект, и
+                    откройте её в программе (<em>Файл > Открыть папку...</em>). Альтернативный вариант - открыть нужную
+                    папку в проводнике, нажать <kbd>ПКМ</kbd> и выбрать <em>Открыть в Visual Studio Code</em>. Щелкните
+                    по пустой области проводника программы <kbd>ПКМ</kbd> и создайте новый файл. Дайте ему название
+                    <code><var>src/java_tasks/FirstProgram.java</var></code>. После нажания на <kbd>Enter</kbd>
+                    программа создаст наш новый файл <code>FirstProgram.java</code> в двух вложенных папках,
+                    <code><var>src</var></code> и <code><var>java_tasks</var></code> соответственно. Такая файловая
+                    структура Java проектов общепринята, и о ней подробнее рассказано в подглаве <a
+                        href="#file_structure">Файловая структура программы</a>.
+                    При первом открытии <code>.java</code> файла программа <a href="##" data-bs-container="body"
+                        data-bs-trigger="focus" data-bs-placement="bottom" data-bs-toggle="popover" data-bs-html="true"
+                        data-bs-content="<img src='img/vscode_java_extension.png'>"
+                        data-bs-custom-class="ct-popover-image">
+                        предложит скачать пакет расширений для работы с Java
+                    </a>, согласитесь и установите его.</p>
+                <div class="card mb-3">
+                    <div class="card-body d-md-flex gap-3 align-items-baseline">
+                        <h5 class="card-title">Примечание</h5>
+                        <div>
+                            <p class="card-text">
+                                В программе доступен русский язык в виде расширения. Для его установки перейдите в
+                                панель расширений и введите в поиске
+                                <em>Russian Language Pack for Visual Studio Code</em>, после чего установите
+                                предложенный пакет.
+                            </p>
+                            <p class="card-text">Панель расширений можно найти в списке значков в левой части программы.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 id="eclipse_ide">Eclipse IDE</h4>
+                <p>Инструкции пока что нет, но вы держитесь.</p>
+
+                <h2 id="first_program">Первая программа</h2>
+                <p>Дополните ваш <code>.java</code> файл следующими строками кода:</p>
+                <div class="card ct-code-snippet-card mb-3">
+                    <div class="card-body tab-content p-0">
+                        <pre class="m-1"><code>package java_tasks;
+
+public class FirstProgram {
+    public static void main(String[] args) {        <!-- -->
+        System.out.println("Hello, world!");
+    }
+}</code></pre>
+                    </div>
+                </div>
+
+                <p>Теперь вы можете запустить свою первую программу. Нажмите <kbd>Shift + F10</kbd>, если вы используете
+                    IntelliJ IDEA, либо <kbd>F5</kbd>, если у вас VS Code, и программа скомпилируется и запустится, а её
+                    вывод появится в консоли среды разработки. Поздравляю! Вы написали свою первую программу на Java.
+                    Дальнейшие подробности и пояснения описаны ниже.
+                </p>
+
+                <h2 id="general_concepts">Основные понятия</h2>
+                <p>Разберём принципы написания программ на Java, необходимые для решения задач раздела Begin.</p>
+                <p>Если вы ещё не установили среду разработки и комплект JDK, то вся необходимая информация ждет вас в
+                    разделе <a href="/get_started">Все, что нужно для старта</a>.</p>
+
+                <h3 id="program_basis">Основа программы</h3>
+                <p>Каждая Java программа начинается одинаково:</p>
+                <div class="card ct-code-snippet-card mb-3">
+                    <div class="card-body tab-content p-0">
+                        <pre class="m-1"><code>package java_tasks;
+
+public class FirstProgram {
+    public static void main(String[] args) {        <!-- -->
+
+    }
+}</code></pre>
+                    </div>
+                </div>
+                <p>Мы объявляем публичный статический метод <code>main</code> внутри публичного класса с именем нашего
+                    файла, в данном случае <code>MyProgram</code>. Все дальнейшие инструкции пишутся внутри этого
+                    метода. Кроме того, мы указываем пакет нашей программы <code>java_tasks</code>, имя которого
+                    соответствует имени директории с нашим файлом.</p>
+                <div class="card mb-3">
+                    <div class="card-body d-md-flex gap-3 align-items-baseline">
+                        <h5 class="card-title">Важно!</h5>
+                        <div>
+                            <p class="card-text">В одном <code>.java</code> файле должен располагаться лишь один
+                                публичный класс с таким
+                                же как у
+                                файла именем и располагаться на самом верху. Остальные классы в файле, при их наличии,
+                                должны быть
+                                приватными.</p>
+                            <a class="card-link"
+                                href="https://www.magnumblog.space/java/131-translating-java-code-conventions#java_source_files"
+                                target="_blank" rel="noopener">3.1 Файлы с исходным кодом Java</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <h4 id="main_method">Главный метод</h3>
+                <p>Наш метод <code>main</code> является главным - именно с инструкций, расположенных в нем, наша
+                    программа начинает работу. Из этого следует, что он должен быть в программе обязательно.
+                    Рассмотрим его модификаторы.</p>
+                <p><code>public</code> - означает, что метод публичный, то есть его <a href="##"
+                        data-bs-toggle="tooltip"
+                        title="Область программы, в которой можно обратиться к классу или вызвать метод">область
+                        видимости</a> распространяется на всю программу. Кроме <code>public</code> также есть
+                    модификаторы доступа <code>protected</code> и <code>private</code>, однако на текущий момент они
+                    нам не понадобятся.</p>
+
+                <p><code>static</code> - означает, что метод статический. Обычные методы располагаются внутри
+                    объектов, позволяя изменять их состояние, и для их вызова необходимо этот самый объект создать.
+                    Чтобы метод был доступен без создания объекта, то есть, принадлежал к классу, к нему добавляют
+                    данный модификатор. Создание объектов нам пока не понадобится.</p>
+
+                <p><code>void</code> - добавляется к методу, если он не возвращает никакого значения. В ином случае
+                    вместо <code>void</code> указывается возвращаемый тип, например, <code>float</code> или
+                    <code>String</code>, а в самом теле метода, обычно, в его конце, размещается оператор
+                    <code>return</code>. Возвращение значения нам пока не понадобится.</p>
+
+                <p><code>String[] <var>args</var></code> - параметр метода <code>main</code>. Состоит из названия
+                    типа (<code>String[]</code> - массив строк) и имени аргумента (<code><var>args</var></code>).
+                    Любой метод при необходимости может принимать в себя любое количество параметров, разделенных
+                    запятыми, однако на практике рекомендуется использовать не больше двух или трёх. </p>
+                <p>Параметры метода необходимы для того, чтобы вызывающая сторона (в данном случае система) могла
+                    передать в метод
+                    какие-либо данные. Например, в случае метода <code>main</code>, в параметр
+                    <code><var>args</var></code> из системы передается список аргументов командной строки, с
+                    которыми программа была запущена.</p>
+                <p>Абзац с примером применения аргументов, компилируя и вызываю программу из терминала</p>
+
+                <p><code>main(..) { .. }</code> - тело метода</p>
+
+                <h4 id="main_class">Главный класс</h3>
+                <h4 id="main_package">Главный пакет</h3>
+                <h4 id="file_structure">Файловая структура программы</h4>
+
+                <p><a href="/begin.html#general_concepts" class="btn btn-outline-secondary mt-5"><strong>Begin</strong> - Основные понятия</a></p>
+            </div>
+        </main>
+    </div>
+    <footer class="px-lg-2 px-xxl-0 ct-footer py-5 bg-light mt-5">
+        <div class="container-xxl">
+            <div class="row">
+                <div class="col-12 text-center mb-2">
+                    <p class="pt-4">
+                        <a href="/" class="navbar-brand ct-footer-brand ct-brand">
+                            <span class="bg-primary text-white px-2 rounded-3">Code</span> Tasks
+                        </a>
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <p class="small text-muted text-center text-sm-start px-4 px-md-0">
+                        Задачи взяты из книги <span class="text-dark"><span class="text-nowrap">М.Э. Абрамян</span>
+                            «1000 Задач по программированию»</span>
+                    </p>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <p class="small text-muted">© 2021 Максим Песков</p>
+                </div>
+                <div class="col-sm-4 text-center text-sm-end">
+                    <a href="https://github.com/KostarSf/code_tasks" class="ct-github-link" target="_blank"
+                        rel="noopener">
+                        Source
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                            class="d-inline-block align-text-top ms-1" viewBox="0 0 512 499.36" role="img">
+                            <title>GitHub</title>
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z">
+                            </path>
+                        </svg>
+                    </a>
+                    <p class="small text-muted">Currently v2.0.0</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scripts">
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/highlight.min.js"></script>
+        <script src="js/highlight/javascript.min.js"></script>
+        <script src="js/highlight/java.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js"></script>
+        <script src="js/codetasks.js"></script>
+    </div>
 </body>
+
 </html>
