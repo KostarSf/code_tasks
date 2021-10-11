@@ -572,3 +572,30 @@ pre code span::selection {
     border-radius: .2rem;
     width: 100%;
 }
+
+
+/* Donation Page */
+/* ----------------- */
+
+.donation-card {
+    width: 100%;
+}
+
+@media (max-width: 370px) {
+    .donation-card {
+        height: 300px;
+    }
+}
+
+@media (min-width: 576px) {
+    .donation-card {
+        width: 423px;
+        height: 222px;
+    }
+}
+
+@media (max-width: 320px) {
+    .ct-author-photo {
+        width: 100%;
+    }
+}
