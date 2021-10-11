@@ -195,7 +195,11 @@
 
                 <h3 id="jdk">Java Development Kit</h3>
                 <p>JDK - это набор программ, предназначенных для сборки и запуска программ на Java. В отличие от программ на C/C++, где компилятор сразу собирает бинарый exe файл из исходного кода, Java программы компилируются в промежуточный <em>байт-код</em> - файл с расширением <code>.class</code>. Сделано это для максимальной кроссплатформенности - разработчику не нужно каждый раз компилировать программу под каждую платформу. Полученный файл передается виртуальной Java машине, компилируется в нативный бинарый код системы и исполняется на лету.</p>
-                <p>Есть несколько реализаций JDK - проприетарная от Oracle и свободная от OpenJDK. Я рекомендую скачать версию <strong>OpenJDK 11</strong> от Microsoft, <a href="https://docs.microsoft.com/ru-ru/java/openjdk/download" target="_blank" rel="noopener">отсюда</a>. Найдите в списке вашу платформу (<em>Windows x64</em>) и скачайте <em>msi</em> файл. После чего установите программу и перезапустите компьютер.</p>
+                <p>Есть несколько реализаций JDK - проприетарная от Oracle и свободная от OpenJDK. Я рекомендую скачать версию <strong>OpenJDK 11</strong> от Microsoft, <a href="https://docs.microsoft.com/ru-ru/java/openjdk/download" target="_blank" rel="noopener">отсюда</a>. Найдите в списке вашу платформу (<em>Windows x64</em>) и скачайте <em>msi</em> файл. Установите программу и перезапустите компьютер.</p>
+                <figure class="figure">
+                    <img src="img/jdk_java_home.png">
+                    <figcaption class="figure-caption">На экране выбора компонентов не забудьте отметить для установки переменную окружения JAVA_HOME.</figcaption>
+                </figure>
                 <p>Для проверки установки нажмите <kbd>Win + X</kbd>, выберите PowerShell и введите команду <code>java --version</code>. В качестве альтернативы вы можете запустить командную строку через меню Пуск и ввести в ней ту же команду. Программа выведет свою версию, к примеру <samp class="text-muted">openjdk 11.0.12 2021-07-20</samp>.</p>
 
                 <h3 id="ide">Среда разработки</h3>
@@ -208,15 +212,15 @@
                 <p>На текущий момент есть три среды разработки для Java, достойных упоминания - это <strong><a href="https://www.jetbrains.com/ru-ru/idea/download/#section=windows" target="_blank" rel="noopener">IntelliJ IDEA Community</a></strong>, <strong><a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Visual Studio Code</a></strong> и <strong><a href="https://www.eclipse.org/downloads/packages/" target="_blank" rel="noopener">Eclipse IDE</a></strong>. Скачать их вы можете по приведённым ссылкам. Можете выбирать любую, которая вам понравится. Я же использую VS Code, и даже этот текст пишу именно в ней.</p>
 
                 <h4>IntelliJ IDEA</h4>
-                <p>Если вы скачали IntelliJ IDEA, то для начала работы создайте проект, введите его название и выберите его новое местоположение на диске. Остальные настройки можете оставить по-умолчанию. После открытия проекта щелкните <kbd>ПКМ</kbd> по папке <code>src</code> в левой панели и выберите <em>New > Java Class</em>. В появившемся окошке введите <em>java_tasks.FirstProgram</em> (имя пакета и файла нашей программы) и нажмите <kbd>Enter</kbd>.</p>
-                <p>Теперь перед вами открыт ваш новый файл с некоторым кодом. Дополните его, как показано ниже.</p>
+                <p>Если вы скачали IntelliJ IDEA, то для начала работы создайте проект, введите его название и выберите его новое местоположение на диске. Остальные настройки можете оставить по-умолчанию. После открытия проекта щелкните <kbd>ПКМ</kbd> по папке <code>src</code> в левой панели и выберите <em>New > Java Class</em>. В появившемся окошке введите <em>java_tasks.FirstProgram</em> (имя пакета и файла нашей программы) и нажмите <kbd>Enter</kbd>. Такая файловая структура Java программ общепринята и о ней будет подробно рассказано в разделе <a href=""><strong>Begin</strong> - Основа программы</a>.</p>
+                <p>Теперь перед вами открыт ваш новый файл с некоторым кодом. Дополните его, как показано ниже, добавив метод <code>main</code>.</p>
                 <div class="card ct-code-snippet-card mb-3">
                   <div class="card-body tab-content p-0">
                     <pre class="m-1"><code>package java_tasks;
 
 public class FirstProgram {
     public static void main(String[] args) {
-        System.out.println("Hello, world!");
+
     }
 } </code></pre>
                   </div>
@@ -226,29 +230,45 @@ public class FirstProgram {
                     data-bs-custom-class="ct-popover-image">
                     <em>Add Configuration...</em>
                 </a> в правом верхнем углу программы. Добавьте новую конфигурацию, нажав на плюсик, и выберите в выпадающем списке пункт <em>Application</em>. Укажите <a href="##" data-bs-toggle="tooltip" title="Поле Name">имя конфигурации</a>, например, <em>JavaProgram</em>, и <a href="##" data-bs-toggle="tooltip" title="Поле Main Class">главный класс</a>, нажав на иконку справа в поле для ввода. В списке будет единственнственный элемент - ваш файлик. Дважды нажмите <em>Ok</em> и мы готовы начать.</p>
-                <p>Запускать ваши программы вы сможете, нажав на зеленую стрелочку в интерфейсе программы, либо по комбинации клавиш <kbd>Shift + F10</kbd>.</p>
+                <!-- <p>Запускать ваши программы вы сможете, нажав на зеленую стрелочку в интерфейсе программы, либо по комбинации клавиш <kbd>Shift + F10</kbd>.</p> -->
 
                 <h4>Visual Studio Code</h4>
-                <p>Если же вы выбрали VS Code, то создайте новую папку, в которй будет располагаться ваш проеки, и откройте её в программе (<em>Файл > Открыть папку...</em>). Альтернативный вариант - открыть нужную папку в проводнике, нажать <kbd>ПКМ</kbd> и выбрать <em>Открыть в Visual Studio Code</em>. После чего, создайте в редакторе новый файл <code>MyProgram.java</code>, нажав <kbd>ПКМ</kbd> в пустой области слева и выбрав пункт <em>Создать файл</em>. При первом открытии <code>.java</code> файла программа предложит скачать пакет расширений для работы с Java, согласитесь, нажав <em>Установить</em>.</p>
-                <p class="bg-warning">Исправить отсутствие инфы о создании пакета java_tasks</p>
+                <p>Если же вы выбрали VS Code, то создайте новую папку, в которй будет располагаться ваш проект, и откройте её в программе (<em>Файл > Открыть папку...</em>). Альтернативный вариант - открыть нужную папку в проводнике, нажать <kbd>ПКМ</kbd> и выбрать <em>Открыть в Visual Studio Code</em>. Щелкните по пустой области проводника программы <kbd>ПКМ</kbd> и создайте новый файл. Дайте ему название <code><var>src/java_tasks/FirstProgram.java</var></code>. После нажания на <kbd>Enter</kbd> программа создаст наш новый файл <code>FirstProgram.java</code> в двух вложенных папках, <code><var>src</var></code> и <code><var>java_tasks</var></code> соответственно. Такая файловая структура Java проектов общепринята, и о ней подробнее рассказано в разделе <a href=""><strong>Begin</strong> - Основа программы</a>.
+                При первом открытии <code>.java</code> файла программа <a href="##" data-bs-container="body" data-bs-trigger="focus" data-bs-placement="bottom" data-bs-toggle="popover" data-bs-html="true"
+                    data-bs-content="<img src='img/vscode_java_extension.png'>" data-bs-custom-class="ct-popover-image">
+                    предложит скачать пакет расширений для работы с Java
+                </a>, согласитесь и установите его.</p>
                 <div class="card mb-3">
                     <div class="card-body d-md-flex gap-3 align-items-baseline">
                         <h5 class="card-title">Примечание</h5>
                         <div>
                             <p class="card-text">
-                                Вы можете установить русификатор для программы. Для этого перейдите в панель расширений и введите в поиске
+                                В программе доступен русский язык в виде расширения. Для его установки перейдите в панель расширений и введите в поиске
                                 <em>Russian Language Pack for Visual Studio Code</em>, после чего установите предложенный пакет.
                             </p>
                             <p class="card-text">Панель расширений можно найти в списке значков в левой части программы.</p>
                         </div>
                     </div>
                 </div>
+                <!-- <p>Допишите в созданном вами файле эти строки кода и запустите программу, нажав на <kbd>F5</kbd>.</p>
+                <div class="card ct-code-snippet-card mb-3">
+                    <div class="card-body tab-content p-0">
+                        <pre class="m-1"><code>package java_tasks;
+
+public class FirstProgram {
+    public static void main(String[] args) {
+        System.out.println("Hello, world!");
+    }
+} </code></pre>
+                    </div>
+                </div>
+                <p>В консоли, в нижней части окна программы, выведется строка <samp class="text-muted">Hello, world!</samp>.</p> -->
 
                 <h4>Eclipse IDE</h4>
                 <p>Инструкции пока что нет, но вы держитесь.</p>
 
                 <h2 id="first_program">Первая программа</h2>
-                <p>Введите в новоиспеченный <code>.java</code> файл следующие строки кода:</p>
+                <p>Дополните ваш <code>.java</code> файл следующими строками кода:</p>
                 <div class="card ct-code-snippet-card mb-3">
                     <div class="card-body tab-content p-0">
                         <pre class="m-1"><code>package java_tasks;
@@ -261,7 +281,7 @@ public class FirstProgram {
                     </div>
                 </div>
 
-                <p>Теперь вы можете запустить свою первую программу. Нажмите <kbd>Shift + F10</kbd>, если вы используете IntelliJ IDEA, либо <kbd>F5</kbd>, если у вас VS Code, и программа скомпилируется и запустится. Поздравляю! Вы написали свою первую программу на Java. Дальнейшие подробности и пояснения описаны в следующем разделе.</p>
+                <p>Теперь вы можете запустить свою первую программу. Нажмите <kbd>Shift + F10</kbd>, если вы используете IntelliJ IDEA, либо <kbd>F5</kbd>, если у вас VS Code, и программа скомпилируется и запустится, а её вывод появится в консоли среды разработки. Поздравляю! Вы написали свою первую программу на Java. Дальнейшие подробности и пояснения описаны в следующем разделе.</p>
                 <p><a href="begin" class="btn btn-outline-secondary"><strong>Begin</strong> - Основные понятия</a></p>
 
                 <!-- / РАЗДЕЛ Все, что нужно для старта -->
