@@ -95,6 +95,19 @@
 /* Layout */
 /* ---------------------------------- */
 
+html, body {
+    height: 100% !important;
+}
+
+body {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.ct-layout {
+    flex-grow: 1 !important;
+}
+
 @media (min-width: 768px) {
     .ct-layout {
         display: grid;
