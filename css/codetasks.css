@@ -300,6 +300,10 @@ kbd {
     grid-area: toc;
 }
 
+.ct-toc nav a code {
+    font: inherit;
+}
+
 @media (min-width: 992px) {
     .ct-toc {
         position: -webkit-sticky;
