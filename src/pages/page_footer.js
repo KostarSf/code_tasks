@@ -9,7 +9,7 @@ function PageFooter(props) {
                 <div class="row">
                     <div class="col-12 text-center mb-2">
                         <p class="pt-4">
-                            <a href="/" class="navbar-brand ct-footer-brand ct-brand">
+                            <a href="index.html" class="navbar-brand ct-footer-brand ct-brand">
                                 <span class="bg-primary text-white px-2 rounded-3">Code</span> Tasks
                             </a>
                         </p>

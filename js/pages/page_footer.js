@@ -20,7 +20,7 @@ function PageFooter(props) {
                         { "class": "pt-4" },
                         React.createElement(
                             "a",
-                            { href: "/", "class": "navbar-brand ct-footer-brand ct-brand" },
+                            { href: "index.html", "class": "navbar-brand ct-footer-brand ct-brand" },
                             React.createElement(
                                 "span",
                                 { "class": "bg-primary text-white px-2 rounded-3" },
