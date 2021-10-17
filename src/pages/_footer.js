@@ -35,7 +35,7 @@ function PageFooter(props) {
                                 </path>
                             </svg>
                         </a>
-                        <p class="small text-muted">Currently v2.0.0</p>
+                        <p class="small text-muted">Currently v2.1.0</p>
                     </div>
                 </div>
             </div>

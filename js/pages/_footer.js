@@ -82,7 +82,7 @@ function PageFooter(props) {
                     React.createElement(
                         "p",
                         { "class": "small text-muted" },
-                        "Currently v2.0.0"
+                        "Currently v2.1.0"
                     )
                 )
             )
