@@ -91,7 +91,7 @@ function PageSidebar(props) {
         <PageSidebarBase>
             <SidebarSection title="Основы Java" sectionId="java-start">
                 <SidebarSectionItem title="Все, что нужно для старта" link="get_started.html" itemId="get-started" selectedItem={props.selectedItem} />
-                <SidebarSectionItem title="Базовые понятия" badge="скоро" itemId="base-knowledges" selectedItem={props.selectedItem}/>
+                <SidebarSectionItem title="Базовые понятия" link="base_knowledges.html" itemId="base-knowledges" selectedItem={props.selectedItem}/>
             </SidebarSection>
             <SidebarSection title="Задачи" sectionId="tasks">
                 <SidebarSectionItem title="Begin" badge="скоро" itemId="begin" selectedItem={props.selectedItem}/>
