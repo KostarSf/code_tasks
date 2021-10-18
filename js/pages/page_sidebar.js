@@ -117,7 +117,7 @@ function PageSidebar(props) {
             SidebarSection,
             { title: "\u041E\u0441\u043D\u043E\u0432\u044B Java", sectionId: "java-start" },
             React.createElement(SidebarSectionItem, { title: "\u0412\u0441\u0435, \u0447\u0442\u043E \u043D\u0443\u0436\u043D\u043E \u0434\u043B\u044F \u0441\u0442\u0430\u0440\u0442\u0430", link: "get_started.html", itemId: "get-started", selectedItem: props.selectedItem }),
-            React.createElement(SidebarSectionItem, { title: "\u0411\u0430\u0437\u043E\u0432\u044B\u0435 \u043F\u043E\u043D\u044F\u0442\u0438\u044F", badge: "\u0441\u043A\u043E\u0440\u043E", itemId: "base-knowledges", selectedItem: props.selectedItem })
+            React.createElement(SidebarSectionItem, { title: "\u0411\u0430\u0437\u043E\u0432\u044B\u0435 \u043F\u043E\u043D\u044F\u0442\u0438\u044F", link: "base_knowledges.html", itemId: "base-knowledges", selectedItem: props.selectedItem })
         ),
         React.createElement(
             SidebarSection,
