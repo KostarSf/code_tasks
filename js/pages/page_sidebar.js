@@ -122,7 +122,7 @@ function PageSidebar(props) {
         React.createElement(
             SidebarSection,
             { title: "\u0417\u0430\u0434\u0430\u0447\u0438", sectionId: "tasks" },
-            React.createElement(SidebarSectionItem, { title: "Begin", badge: "\u0441\u043A\u043E\u0440\u043E", itemId: "begin", selectedItem: props.selectedItem }),
+            React.createElement(SidebarSectionItem, { title: "Begin", badge: "10", link: "begin.html", itemId: "begin", selectedItem: props.selectedItem }),
             React.createElement(SidebarSectionItem, { title: "Integer", badge: "\u0441\u043A\u043E\u0440\u043E", itemId: "integer", selectedItem: props.selectedItem }),
             React.createElement(SidebarSectionItem, { title: "Boolean", badge: "\u0441\u043A\u043E\u0440\u043E", itemId: "boolean", selectedItem: props.selectedItem })
         )

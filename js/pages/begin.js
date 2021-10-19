@@ -1,0 +1,1 @@
+ReactDOM.render(React.createElement(PageSidebar, { selectedItem: "begin" }), document.getElementById('page_sidebar_container'));
