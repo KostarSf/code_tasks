@@ -94,7 +94,7 @@ function PageSidebar(props) {
                 <SidebarSectionItem title="Базовые понятия" link="base_knowledges.html" itemId="base-knowledges" selectedItem={props.selectedItem}/>
             </SidebarSection>
             <SidebarSection title="Задачи" sectionId="tasks">
-                <SidebarSectionItem title="Begin" badge="скоро" itemId="begin" selectedItem={props.selectedItem}/>
+                <SidebarSectionItem title="Begin" badge="10" link="begin.html" itemId="begin" selectedItem={props.selectedItem}/>
                 <SidebarSectionItem title="Integer" badge="скоро" itemId="integer" selectedItem={props.selectedItem}/>
                 <SidebarSectionItem title="Boolean" badge="скоро" itemId="boolean" selectedItem={props.selectedItem}/>
             </SidebarSection>
