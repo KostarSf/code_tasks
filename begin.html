@@ -50,126 +50,47 @@
             </div>
             <div class="ct-content ps-lg-4" id="page_content_container">
                 <h2 id="begin_tasks">Задачи раздела Begin</h2>
-                <p>Приведённая выше информация позволит вам решить задачи из этой секции. Если же вы испытываете трудности, вы можете посмотреть, как программа должна отработать, а также посмотреть её полное решение.</p>
+                <p>Информация раздела <a href="base_knowledges.html">Базовые понятия</a> позволит вам решить задачи этой группы. Если же вы испытываете трудности, вы можете посмотреть, как программа должна отработать, а также посмотреть её полное решение.</p>
 
                 <h3 id="begin_1">Begin 1</h3>
-                <p>Дана сторона квадрата <span class="formula">a</span>. Найти его периметр <span
-                        class="formula">P = 4⋅ a</span>.
-                </p>
-
-                <div class="card ct-code-snippet-card">
-                    <div class="card-header d-flex justify-content-between align-items-center">
-                        <div class="nav nav-pills ms-1" id="begin1-tablist" role="tablist">
-                            <button class="nav-link py-1 btn-sm " id="begin1_js-tab" data-bs-toggle="pill"
-                                data-bs-target="#begin1_js-content" type="button" role="tab"
-                                aria-controls="begin1_js-content" aria-selected="true">JS</button>
-                            <button class="nav-link py-1 btn-sm active " id="begin1_java-tab"
-                                data-bs-toggle="pill" data-bs-target="#begin1_java-content" type="button"
-                                role="tab" aria-controls="begin1_java-content"
-                                aria-selected="false">Java</button>
-                        </div>
-                        <button id="btn_snippet_begin1"
-                            class="btn btn-outline-primary btn-sm">Запустить</button>
-                    </div>
-                    <div class="card-body tab-content p-0 user-select-none">
-                        <div class="begin1_js-content tab-pane fade " id="begin1_js-content" role="tabpanel"
-                            aria-labelledby="begin1_js-tab">
-                            <pre class="m-1"><code>let a = Number(prompt("Введите сторону квадрата"));
-let P = 4 * a;
-alert("Периметр квадрата: " + P);</code></pre>
-                        </div>
-                        <div class="begin1_java-content tab-pane fade show active" id="begin1_java-content"
-                            role="tabpanel" aria-labelledby="begin1_java-tab">
-                            <pre class="m-1"><code>package java_tasks;
-
-import java.util.Scanner;
-
-class JavaTasks_Begin1 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Введите сторону квадрата: ");
-        float a = scanner.nextFloat();
-
-        float P = 4 * a;
-
-        System.out.println("Периметр квадрата: " + P);
-        scanner.close();
-    }
-}</code></pre>
-                        </div>
-                    </div>
-                    <script>
-                        function snippet_begin1() {
-                            let a = Number(prompt("Введите сторону квадрата"));
-                            let P = 4 * a;
-                            alert("Периметр квадрата: " + P);
-                        }
-
-                        let btn_snippet_begin1 = document.getElementById("btn_snippet_begin1");
-                        btn_snippet_begin1.addEventListener('click', () => snippet_begin1());
-                    </script>
-                </div>
+                <p>Дана сторона квадрата <span class="formula">a</span>. Найти его периметр <span class="formula">P = 4⋅ a</span>. </p>
+                <div class="react-code-card" data-cardid="begin1"></div>
 
                 <h3 id="begin_2">Begin 2</h3>
-                <p>Дана сторона квадрата <span class="formula">a</span>. Найти его площадь <span
-                        class="formula">S =
-                        a<sup>2</sup></span>.
-                </p>
+                <p>Дана сторона квадрата <span class="formula">a</span>. Найти его площадь <span class="formula">S = a<sup>2</sup></span>. </p>
+                <div class="react-code-card" data-cardid="begin2"></div>
 
-                <div class="card ct-code-snippet-card">
-                    <div class="card-header d-flex justify-content-between align-items-center">
-                        <div class="nav nav-pills ms-1" id="begin2-tablist" role="tablist">
-                            <button class="nav-link py-1 btn-sm " id="begin2_js-tab" data-bs-toggle="pill"
-                                data-bs-target="#begin2_js-content" type="button" role="tab"
-                                aria-controls="begin2_js-content" aria-selected="true">JS</button>
-                            <button class="nav-link py-1 btn-sm active " id="begin2_java-tab"
-                                data-bs-toggle="pill" data-bs-target="#begin2_java-content" type="button"
-                                role="tab" aria-controls="begin2_java-content"
-                                aria-selected="false">Java</button>
-                        </div>
-                        <button id="btn_snippet_begin2"
-                            class="btn btn-outline-primary btn-sm">Запустить</button>
-                    </div>
-                    <div class="card-body tab-content p-0 user-select-none">
-                        <div class="begin2_js-content tab-pane fade " id="begin2_js-content" role="tabpanel"
-                            aria-labelledby="begin2_js-tab">
-                            <pre class="m-1"><code>let a = Number(prompt("Введите сторону квадрата"));
-let S = a * a;
-alert("Площадь квадрата: " + S); </code></pre>
-                        </div>
-                        <div class="begin2_java-content tab-pane fade show active" id="begin2_java-content"
-                            role="tabpanel" aria-labelledby="begin2_java-tab">
-                            <pre class="m-1"><code>package java_tasks;
+                <h3 id="begin_3">Begin 3 <small class="btn btn-outline-dark btn-sm disabled py-0 ms-3 ">Сложный</small></h3>
+                <p>Даны стороны прямоугольника <span class="formula">a</span> и <span class="formula">b</span>. Найти его площадь <span class="formula">S = a⋅ b </span> и периметр <span class="formula">P = 2⋅ (a + b)</span>.</p>
+                <div class="react-code-card" data-cardid="begin3"></div>
 
-import java.util.Scanner;
+                <h3 id="begin_4">Begin 4</h3>
+                <p>Дан диаметр окружности <span class="formula">d</span>. Найти её длину <span class="formula">L = π⋅ d</span>. В качестве значения <span class="formula">π</span> использовать <span class="formula">3.14</span>. </p>
+                <div class="react-code-card" data-cardid="begin4"></div>
 
-class JavaTasks_Begin2 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+                <h3 id="begin_5">Begin 5</h3>
+                <p>Дана длина ребра куба <span class="formula">a</span>. Найти объём куба <span class="formula">V = a<sup>3</sup></span> и площадь его поверхности <span class="formula">S = 6⋅ a<sup>2</sup></span>. </p>
+                <div class="react-code-card" data-cardid="begin5"></div>
 
-        System.out.print("Введите сторону квадрата: ");
-        float a = scanner.nextFloat();
+                <h3 id="begin_6">Begin 6</h3>
+                <p>Даны длины рёбер <span class="formula">a</span>, <span class="formula">b</span>, <span class="formula">c</span> прямоугольного параллелепипеда. Найти его объём <span class="formula">V = a⋅ b⋅ c</span> и площадь поверхности <span class="formula">S = 2⋅ (a⋅ b + b⋅ c + a⋅ c)</span>. </p>
+                <div class="react-code-card" data-cardid="begin6"></div>
 
-        float S = a * a;
+                <h3 id="begin_7">Begin 7 <small class="btn btn-outline-dark btn-sm disabled py-0 ms-3 ">Сложный</small></h3>
+                <p>Найти длину окружности <span class="formula">L</span> и площадь круга <span class="formula">S</span> заданного радиуса <span class="formula">R</span>: <span class="formula">L = 2⋅ π⋅ R</span>, <span class="formula">S = π⋅ R<sup>2</sup></span>. </p>
+                <div class="react-code-card" data-cardid="begin7"></div>
 
-        System.out.println("Площадь квадрата: " + S);
-        scanner.close();
-    }
-}</code></pre>
-                        </div>
-                    </div>
-                    <script>
-                        function snippet_begin2() {
-                            let a = Number(prompt("Введите сторону квадрата"));
-                            let S = a * a;
-                            alert("Площадь квадрата: " + S);
-                        }
+                <h3 id="begin_8">Begin 8</h3>
+                <p>Даны два числа <span class="formula">a</span> и <span class="formula">b</span>. Найти их <span class="fst-italic">среднее арифметическое</span>: <span class="formula">(a + b) / 2</span>. </p>
+                <div class="react-code-card" data-cardid="begin8"></div>
 
-                        let btn_snippet_begin2 = document.getElementById("btn_snippet_begin2");
-                        btn_snippet_begin2.addEventListener('click', () => snippet_begin2());
-                    </script>
-                </div>
+                <h3 id="begin_9">Begin 9</h3>
+                <p>Даны два неотрицательных числа <span class="formula">a</span> и <span class="formula">b</span>. Найти их <span class="fst-italic">среднее геометрическое</span>, то есть квадратный корень из их произведения: <span class="formula">√(a * b)</span> </p>
+                <div class="react-code-card" data-cardid="begin9"></div>
+
+                <h3 id="begin_10">Begin 10</h3>
+                <p>Даны два ненулевых числа. Найти сумму, разность, произведение и частное их квадратов. </p>
+                <div class="react-code-card" data-cardid="begin10"></div>
 
                 <p class="text-muted fs-5 pt-3 px-2 text-center">Больше задач в скором времени...</p>
             </div>
