@@ -509,6 +509,7 @@ pre code span::selection {
     padding: 0 .3em;
     border: 1px solid hsl(204, 14%, 96%);
     border-radius: .2em;
+    white-space: nowrap;
 }
 
 
