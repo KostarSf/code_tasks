@@ -16,8 +16,7 @@ function PageFooter(props) {
                     </div>
                     <div class="col-sm-4">
                         <p class="small text-muted text-center text-sm-start px-4 px-md-0">
-                            Задачи взяты из книги <span class="text-dark"><span class="text-nowrap">М.Э. Абрамян</span>
-                                «1000 Задач по программированию»</span>
+                            Задачи взяты из книги <span class="text-dark"><span class="text-nowrap">М.Э. Абрамян</span> «1000 Задач по программированию»</span>
                         </p>
                     </div>
                     <div class="col-sm-4 text-center">

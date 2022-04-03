@@ -121,12 +121,17 @@ function PageSidebar(props) {
         ),
         React.createElement(
             SidebarSection,
-            { title: "\u0417\u0430\u0434\u0430\u0447\u0438", sectionId: "tasks" },
+            { title: "\u0411\u0430\u0437\u043E\u0432\u044B\u0439 \u0443\u0440\u043E\u0432\u0435\u043D\u044C", sectionId: "base-tasks" },
             React.createElement(SidebarSectionItem, { title: "Begin", badge: "10", link: "begin.html", itemId: "begin", selectedItem: props.selectedItem }),
             React.createElement(SidebarSectionItem, { title: "Integer", badge: "\u0441\u043A\u043E\u0440\u043E", itemId: "integer", selectedItem: props.selectedItem }),
             React.createElement(SidebarSectionItem, { title: "Boolean", badge: "\u0441\u043A\u043E\u0440\u043E", itemId: "boolean", selectedItem: props.selectedItem })
+        ),
+        React.createElement(
+            SidebarSection,
+            { title: "\u0421\u0440\u0435\u0434\u043D\u0438\u0439 \u0443\u0440\u043E\u0432\u0435\u043D\u044C", sectionId: "middle-tasks" },
+            React.createElement(SidebarSectionItem, { title: "\u0417\u0430\u0434\u0430\u0447\u0438 \u043F\u043E \u041E\u041E\u041F", badge: "2", link: "base_oop.html", itemId: "base-oop", selectedItem: props.selectedItem })
         )
     );
 }
 
-ReactDOM.render(React.createElement(PageSidebar, null), document.getElementById('page_sidebar_container'));
+ReactDOM.render(React.createElement(PageSidebar, { selectedItem: document.getElementById('page_sidebar_container').dataset.selectedItem }), document.getElementById('page_sidebar_container'));

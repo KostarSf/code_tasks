@@ -93,16 +93,19 @@ function PageSidebar(props) {
                 <SidebarSectionItem title="Все, что нужно для старта" link="get_started.html" itemId="get-started" selectedItem={props.selectedItem} />
                 <SidebarSectionItem title="Базовые понятия" link="base_knowledges.html" itemId="base-knowledges" selectedItem={props.selectedItem}/>
             </SidebarSection>
-            <SidebarSection title="Задачи" sectionId="tasks">
+            <SidebarSection title="Базовый уровень" sectionId="base-tasks">
                 <SidebarSectionItem title="Begin" badge="10" link="begin.html" itemId="begin" selectedItem={props.selectedItem}/>
                 <SidebarSectionItem title="Integer" badge="скоро" itemId="integer" selectedItem={props.selectedItem}/>
                 <SidebarSectionItem title="Boolean" badge="скоро" itemId="boolean" selectedItem={props.selectedItem}/>
+            </SidebarSection>
+            <SidebarSection title="Средний уровень" sectionId="middle-tasks">
+                <SidebarSectionItem title="Задачи по ООП" badge="2" link="base_oop.html" itemId="base-oop" selectedItem={props.selectedItem} />
             </SidebarSection>
         </PageSidebarBase>
     )
 }
 
 ReactDOM.render(
-    <PageSidebar />,
+    <PageSidebar selectedItem={document.getElementById('page_sidebar_container').dataset.selectedItem}/>,
     document.getElementById('page_sidebar_container')
 );
